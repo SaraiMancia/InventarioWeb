@@ -26,7 +26,12 @@ public class ProductoDAOImplementar implements ProductoDAO {
                 Producto producto = new Producto();
                 producto.setId_producto(resultadoSQL.getInt("id_producto));
                 producto.setNom_producto(resultadoSQL.getString("nom_producto"));
-                producto.setEstado_producto(resultadoSQL.getInt("estado_producto"));
+                producto.setCategoria_id(resultadoSQL.getInt("categoria_id));"
+                producto.setStock(resultadoSQL.getfloat("stock));"
+                producto.setPrecio(resultadoSQL.getfloat("precio));"
+                producto.setUnidadMedida(resultadoSQL.getString("unidadMedida"));
+                producto.setEstado(resultadoSQL.getInt("estado"));
+                producto.setCategoria(resultadoSQL.getCategoria("categoria));
                 lista.add(producto);
             }
         }catch(Exception ex){
@@ -54,7 +59,12 @@ public class ProductoDAOImplementar implements ProductoDAO {
             while(resultadoSQL.next()){
                producto.setId_producto(resultadoSQL.getInt("id_producto"));
                 producto.setNom_producto(resultadoSQL.getString("nom_producto"));
-                producto.setEstado_producto(resultadoSQL.getInt("estado_producto"));
+                producto.setCategoria_id(resultadoSQL.getInt("categoria_id));"
+                producto.setStock(resultadoSQL.getfloat("stock));"
+                producto.setPrecio(resultadoSQL.getfloat("precio));"
+                producto.setUnidadMedida(resultadoSQL.getString("unidadMedida"));
+                producto.setEstado(resultadoSQL.getInt("estado_p"));
+                producto.setCategoria(resultadoSQL.getCategoria("categoria));
             }
             
         }catch(Exception e){
