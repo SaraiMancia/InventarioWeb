@@ -52,11 +52,13 @@ public class ProductosS extends HttpServlet {
              this.listaProducto(request, response);
          }else if(estado.equals("editar")){
              System.out.println("Editando productos....");
-             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto+"&&estado="+estado_p);
+             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto+"&&categoria="+categoria_id+
+                     "&&stock="+stock+"&&precio="+precio+"&&unidad de medida"+unidadMedida+"&&estado producto"+estado);
              dispatcher.forward(request, response);
          }else if(estado.equals("eliminar")){
              System.out.println("Baja de productos...");
-             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/eliminarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto);
+             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/eliminarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto+"&&categoria="+categoria_id+
+                     "&&stock="+stock+"&&precio="+precio+"&&unidad de medida"+unidadMedida+"&&estado producto"+estado);
              dispatcher.forward(request, response);
          }else if(estado.equals("crear")){
              System.out.println("Crear productos...");

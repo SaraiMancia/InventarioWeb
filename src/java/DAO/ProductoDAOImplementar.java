@@ -4,35 +4,36 @@ package DAO;
 
 import Factory.ConexionBD;
 import Factory.FactoryConexionBD;
+import Model.Categoria;
 import Model.Producto;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductoDAOImplementar implements ProductoDAO {
-     public ProductoDAOImplementar() {
-     
-    } 
+
+
+     public class ProductoDAOImplementar implements ProductoDAO {
+    
+     ConexionBD conn;
+
+    public ProductoDAOImplementar() {
+    
+    }
 
     @Override
     public List<Producto> Listar() {
-         this.conn = FactoryConexionBD.open(FactoryConexionBD.MySQL);
+      this.conn = FactoryConexionBD.open(FactoryConexionBD.MySQL);
         StringBuilder miSQL = new StringBuilder();
         miSQL.append("select * from tb_producto;");
         List<Producto> lista = new ArrayList<Producto>();
         try{
             ResultSet resultadoSQL = this.conn.consultaSQL(miSQL.toString());
             while(resultadoSQL.next()){
-                Producto producto = new Producto();
-                producto.setId_producto(resultadoSQL.getInt("id_producto));
-                producto.setNom_producto(resultadoSQL.getString("nom_producto"));
-                producto.setCategoria_id(resultadoSQL.getInt("categoria_id));"
-                producto.setStock(resultadoSQL.getfloat("stock));"
-                producto.setPrecio(resultadoSQL.getfloat("precio));"
-                producto.setUnidadMedida(resultadoSQL.getString("unidadMedida"));
-                producto.setEstado(resultadoSQL.getInt("estado"));
-                producto.setCategoria(resultadoSQL.getCategoria("categoria));
-                lista.add(producto);
+                Producto prodc = new Producto();
+                prodc.setId_producto(resultadoSQL.getInt("id_producto"));
+                prodc.setNom_producto(resultadoSQL.getString("nom_producto"));
+                prodc.setCategoria_id(resultadoSQL.getInt("categoria_id"));
+                lista.add(prodc);
             }
         }catch(Exception ex){
             ex.printStackTrace();
@@ -41,6 +42,7 @@ public class ProductoDAOImplementar implements ProductoDAO {
         }
         
         return lista;
+    
     }
 
     @Override
@@ -49,6 +51,10 @@ public class ProductoDAOImplementar implements ProductoDAO {
     }
 
     @Override
+<<<<<<< Updated upstream
+    public Producto editarProd(int id_prod_edit) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+=======
     public Producto editarCat(int id_prod_edit) {
         this.conn = FactoryConexionBD.open(FactoryConexionBD.MySQL);
         Producto producto = new Producto();
@@ -59,12 +65,12 @@ public class ProductoDAOImplementar implements ProductoDAO {
             while(resultadoSQL.next()){
                producto.setId_producto(resultadoSQL.getInt("id_producto"));
                 producto.setNom_producto(resultadoSQL.getString("nom_producto"));
-                producto.setCategoria_id(resultadoSQL.getInt("categoria_id));"
-                producto.setStock(resultadoSQL.getfloat("stock));"
-                producto.setPrecio(resultadoSQL.getfloat("precio));"
+                producto.setCategoria_id(resultadoSQL.getInt("categoria_id"));
+                producto.setStock(resultadoSQL.getFloat("stock"));
+                producto.setPrecio(resultadoSQL.getFloat("precio"));
                 producto.setUnidadMedida(resultadoSQL.getString("unidadMedida"));
                 producto.setEstado(resultadoSQL.getInt("estado_p"));
-                producto.setCategoria(resultadoSQL.getCategoria("categoria));
+                producto.setCategoria(resultadoSQL.getCategoria("categoria"));
             }
             
         }catch(Exception e){
@@ -74,10 +80,19 @@ public class ProductoDAOImplementar implements ProductoDAO {
         }
         
         return producto;
+>>>>>>> Stashed changes
     }
 
     @Override
     public boolean guardarProd(Producto producto) {
+<<<<<<< Updated upstream
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean borrarProd(int id_prod_borrar) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+=======
            this.conn = FactoryConexionBD.open(FactoryConexionBD.MySQL);
         boolean guarda = false;
         
@@ -95,7 +110,7 @@ public class ProductoDAOImplementar implements ProductoDAO {
                 StringBuilder miSQL = new StringBuilder();
                 miSQL.append("UPDATE tb_producto SET id_producto = ").append(producto.getId_producto());
                 miSQL.append(", nom_producto = '").append(producto.getNom_producto());
-                miSQL.append("', estado_producto = ").append(producto.getEstado_producto());
+                  miSQL.append("', estado_producto = ").append(producto.getEstado_producto());
                 miSQL.append(" WHERE id_producto = ").append(producto.getId_producto()).append(";");
                 this.conn.ejecutarSQL(miSQL.toString());
             }
@@ -126,6 +141,17 @@ public class ProductoDAOImplementar implements ProductoDAO {
         
         return borra;
     }
+
+    @Override
+    public Producto editarProd(int id_prod_edit) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-}
+
+    @Override
+    public boolean borrarProd(int id_prod_borrar) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+>>>>>>> Stashed changes
+    }
+     }
+        

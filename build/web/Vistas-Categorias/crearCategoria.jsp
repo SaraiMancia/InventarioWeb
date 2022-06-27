@@ -14,15 +14,15 @@
             }
         </script>
     </head>
+    <center>
     <body>
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         
-        <h3>Mantenimiento Categorias</h3>
-             
+     
        <div class="card text-center" style="width: 18rem;">
   <div class="card-body">
   <h5 class="card-title"></h5>
-    <p class="card-text"> <h2> Aqui se piden los datos </h2>    
+    <p class="card-text"> 
        <p>  Por favor introduce la información:</p> 
           <form class="form-horizantal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath()%>/categoriasS.do" method="post">    
            
@@ -46,6 +46,7 @@
   
                 <%@include file="../WEB-INF/Vistas-Parciales/pie.jspf" %>
     </body>
+    </center>
 </html>
     </head>
 </html>
