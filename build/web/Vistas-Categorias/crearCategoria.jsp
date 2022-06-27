@@ -18,29 +18,32 @@
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         
         <h3>Mantenimiento Categorias</h3>
-        <form class="form-horizantal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath()%>/categoriasS.do" method="post">
-            <input type="hidden" name="id_categoria" value="<%= Categoria.getId_categoria() %>">
-            <div class="form-group">
-                <label for="txtNomCategoria" class="col-sm-2 control-label">Nombre:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" name="txtNomCategoria" value="<%= Categoria.getNom_categoria() %>">
-                    
-                </div>
-            </div>
-                    <div class="form-group">
-                        <label for="txtEstadoCategoria" class="col-sm-2 control-label">Estado:</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="txtEstadoCategoria" value="">
-                        </div>
-                    </div>
-        </body><div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <input type="submit" class="btn btn-success btn-sm" name="btnGuardar" value="Guardar"/>
+             
+       <div class="card text-center" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title"></h5>
+    <p class="card-text"> <h2> Aqui se piden los datos </h2>    
+       <p>  Por favor introduce la información:</p> 
+          <form class="form-horizantal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath()%>/categoriasS.do" method="post">    
+           
+              
+                   <td align="right">   Id categoria: </td>              
+                   <td>      <input type="hidden" name="id_categoria" value="<%= Categoria.getId_categoria() %>"></td> <br><br>          
+                           
+                   <td align="right"> Nombre: </td>                  
+                   <td>    <input type="text" class="form-control" name="txtNomCategoria" value="<%= Categoria.getNom_categoria() %>"></td>  <br><br>         
+                      <td align="right"> Estado: </td>                  
+                      <td>    <input type="text" class="form-control" name="txtEstadoCategoria" value=""> </td> <br><br>          
+                      
+         
+               <input type="submit" class="btn btn-success btn-sm" name="btnGuardar" value="Guardar"/>
                 <input type="button" class="btn btn-danger btn-sm" onclick="regresar('<%= request.getContextPath() %>/categoriasS.do?opcion=listar')"
-                       name="btnRegresar" value="Regresar" />         
-            </div>
-        </div>
-</form>
+                       name="btnRegresar" value="Regresar" />    
+       </form>  
+ 
+  </div>
+</div>
+  
                 <%@include file="../WEB-INF/Vistas-Parciales/pie.jspf" %>
     </body>
 </html>

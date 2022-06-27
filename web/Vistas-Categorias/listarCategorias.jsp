@@ -9,6 +9,7 @@
         <title>Control de inventario</title>
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
+    <center>
     <body>
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         
@@ -29,8 +30,8 @@
                     <td><%= categoria.getNom_categoria() %></td>
                     <td><%= categoria.getEstado_categoria() %></td>
                     <td>
-                        <a href="categoriasS.do?opcion=editar&&id=<%= categoria.getId_categoria() %>&&nombre=<%= categoria.getNom_categoria() %>&&estado=<%= categoria.getEstado_categoria() %>" class="btn btn-info btn-sm glyphicon glyphicon-edit"  role="button">Editar</a>
-                        <a href="categoriasS.do?opcion=eliminar&&id=<%= categoria.getId_categoria() %>&&nombre=<%= categoria.getNom_categoria() %>" class="btn btn-danger btn-sm glyphicon glyphicon-remove"  role="button">Eliminar</a>
+                        <a href="categoriasS.do?opcion=editar&&id=<%= categoria.getId_categoria() %>&&nombre=<%= categoria.getNom_categoria() %>&&estado=<%= categoria.getEstado_categoria() %>" class="btn btn-info btn-sm glyphicon glyphicon-edit"  role="button"> Editar</a>
+                        <a href="categoriasS.do?opcion=eliminar&&id=<%= categoria.getId_categoria() %>&&nombre=<%= categoria.getNom_categoria() %>" class="btn btn-danger btn-sm glyphicon glyphicon-remove"  role="button"> Eliminar</a>
                     </td>
                 </tr>
                 <%
@@ -40,4 +41,5 @@
         </div>
                 <%@include file = "../WEB-INF/Vistas-Parciales/pie.jspf" %>
     </body>
+    </center>
 </html>
