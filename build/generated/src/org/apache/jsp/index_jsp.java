@@ -79,6 +79,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<di>\r\n");
       out.write("    <div class = \"encabezado\">\r\n");
       out.write("        Sistema de Control de Inventario\r\n");
+      out.write("        <a href=\"Index\" class=\"btn btn-primary btn-sm\" role=\"button\">Inicio</a>\r\n");
+      out.write("        <a href=\"categoriasS.do?opcion=listar\" class=\"btn btn-primary btn-sm\" role=\"button\">Categorias</a>\r\n");
       out.write("    </div>\r\n");
       out.write("    <div class=\"contenido\">\r\n");
       out.write("\r\n");
@@ -88,7 +90,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("</div>\r\n");
       out.write("<div class=\"pie\">\r\n");
-      out.write("    &COPY; Kevin Melvin Armando\r\n");
+      out.write("    &COPY;  Alexa A\r\n");
       out.write("</div>\r\n");
       out.write("</div>\r\n");
       out.write("\r\n");
