@@ -78,7 +78,7 @@ public class UsuarioDaoImplementar implements UsuarioDAO{
         UsuarioDAO p = new UsuarioDaoImplementar();
         //p.sesion("chovi", "123");
         ArrayList<Usuario> user = new ArrayList();
-        user = p.startSesion("manuel.gamez@itca.edu.sv", "12345");
+        user = p.startSesion("melani.beltran20@itca.edu.sv", "12345");
         //Para obtener el tamaño de un arraylist. El tamaño esta dado en base
         //a la cantidad de filas o registros existentes en la BD.
         int size = user.size();
