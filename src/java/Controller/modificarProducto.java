@@ -3,8 +3,10 @@ package Controller;
 
 import DAO.ProductoDAO;
 import DAO.ProductoDAOImplementar;
+import Model.Producto;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -44,11 +46,11 @@ public class modificarProducto extends HttpServlet {
          ProductoDAO producto = new ProductoDAOImplementar();
          Producto prod = new Producto();
          prod.setId_producto(Integer.parseInt(id_producto));
-         prod.setNom_categoria(nombre_cat);
-         cat.setEstado_categoria(Integer.parseInt(estado_cat));
-         if(categoria.guardarCat(cat)){
+         prod.setNom_producto(nom_producto);
+         prod.setEstado_producto(Integer.parseInt(estado_producto));
+         if(producto.guardarProducto(prod)){
              //System.out.println("Registro Actualizado.");
-              RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Categorias/editarCategoria.jsp?aviso=ok");
+              RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProductos.jsp?aviso=ok");
               dispatcher.forward(request, response);
          }else{
              System.out.println("Error. El registro no se pudo actualizar.");
