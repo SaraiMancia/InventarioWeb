@@ -24,6 +24,10 @@
         <servlet-name>eliminarCategoria</servlet-name>
         <servlet-class>Controller.eliminarCategoria</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProductosS</servlet-name>
+        <servlet-class>Controller.ProductosS</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
         <url-pattern>/Index</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>eliminarCategoria</servlet-name>
         <url-pattern>/eliminarCategoria.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductosS</servlet-name>
+        <url-pattern>/ProductosS.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
