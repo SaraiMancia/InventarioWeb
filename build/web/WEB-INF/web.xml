@@ -28,6 +28,14 @@
         <servlet-name>ProductosS</servlet-name>
         <servlet-class>Controller.ProductosS</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>eliminarProducto</servlet-name>
+        <servlet-class>Controller.eliminarProducto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>modificarProducto</servlet-name>
+        <servlet-class>Controller.modificarProducto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Index</servlet-name>
         <url-pattern>/Index</url-pattern>
@@ -55,6 +63,14 @@
     <servlet-mapping>
         <servlet-name>ProductosS</servlet-name>
         <url-pattern>/ProductosS.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>eliminarProducto</servlet-name>
+        <url-pattern>/eliminarProducto.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>modificarProducto</servlet-name>
+        <url-pattern>/modificarProducto.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
