@@ -1,10 +1,10 @@
-package org.apache.jsp;
+package org.apache.jsp.Vistas_002dCategorias;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class crearCategoria_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -13,9 +13,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   static {
     _jspx_dependants = new java.util.ArrayList<String>(3);
-    _jspx_dependants.add("/WEB-INF/Vistas-Parciales/css-js.jspf");
-    _jspx_dependants.add("/WEB-INF/Vistas-Parciales/encabezado.jspf");
-    _jspx_dependants.add("/WEB-INF/Vistas-Parciales/pie.jspf");
+    _jspx_dependants.add("/Vistas-Categorias/../WEB-INF/Vistas-Parciales/css-js.jspf");
+    _jspx_dependants.add("/Vistas-Categorias/../WEB-INF/Vistas-Parciales/encabezado.jspf");
+    _jspx_dependants.add("/Vistas-Categorias/../WEB-INF/Vistas-Parciales/pie.jspf");
   }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -49,11 +49,22 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\r\n");
-      out.write("<!DOCTYPE html>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      Model.Categoria Categoria = null;
+      synchronized (session) {
+        Categoria = (Model.Categoria) _jspx_page_context.getAttribute("Categoria", PageContext.SESSION_SCOPE);
+        if (Categoria == null){
+          Categoria = new Model.Categoria();
+          _jspx_page_context.setAttribute("Categoria", Categoria, PageContext.SESSION_SCOPE);
+        }
+      }
+      out.write("\r\n");
+      out.write("<!DOCTYE html>\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("        <title>Control de inventario</title>\r\n");
+      out.write("        <title> Control de inventario</title>\r\n");
       out.write("        ");
       out.write("\r\n");
       out.write("\r\n");
@@ -71,7 +82,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<script src=\"bootstrap/js/jquery-3.2.1.js\" type=\"text/javascript\"></script>\r\n");
       out.write("<script src=\"bootstrap/js/jquery-3.2.1.min.js\" type=\"text/javascript\"></script>\r\n");
       out.write("\r\n");
+      out.write("        <script type=\"text/javascript\">\r\n");
+      out.write("            function regresar(url){\r\n");
+      out.write("                location.href = url;\r\n");
+      out.write("            }\r\n");
+      out.write("        </script>\r\n");
       out.write("    </head>\r\n");
+      out.write("    <center>\r\n");
       out.write("    <body>\r\n");
       out.write("        ");
       out.write("\r\n");
@@ -85,11 +102,42 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </div>\r\n");
       out.write("    <div class=\"contenido\">\r\n");
       out.write("\r\n");
-      out.write("        <h1>Resgistrar productos</h1>\r\n");
-      out.write("       <img class=\"mb-4\" src=\"assets/imgs/Productos.png\" alt=\"\" width=\"72\" height=\"57\">\r\n");
-      out.write("\r\n");
       out.write("        \r\n");
-      out.write("        ");
+      out.write("     \r\n");
+      out.write("       <div class=\"card text-center\" style=\"width: 18rem;\">\r\n");
+      out.write("  <div class=\"card-body\">\r\n");
+      out.write("  <h5 class=\"card-title\"></h5>\r\n");
+      out.write("    <p class=\"card-text\"> \r\n");
+      out.write("       <p>  Por favor introduce la información:</p> \r\n");
+      out.write("          <form class=\"form-horizantal\" id=\"frmCategoria\" name=\"frmCategoria\" action=\"");
+      out.print( request.getContextPath());
+      out.write("/categoriasS.do\" method=\"post\">    \r\n");
+      out.write("           \r\n");
+      out.write("              \r\n");
+      out.write("                   <td align=\"right\">   Id categoria: </td>              \r\n");
+      out.write("                   <td>      <input type=\"hidden\" name=\"id_categoria\" value=\"");
+      out.print( Categoria.getId_categoria() );
+      out.write("\"></td> <br><br>          \r\n");
+      out.write("                           \r\n");
+      out.write("                   <td align=\"right\"> Nombre: </td>                  \r\n");
+      out.write("                   <td>    <input type=\"text\" class=\"form-control\" name=\"txtNomCategoria\" value=\"");
+      out.print( Categoria.getNom_categoria() );
+      out.write("\"></td>  <br><br>         \r\n");
+      out.write("                      <td align=\"right\"> Estado: </td>                  \r\n");
+      out.write("                      <td>    <input type=\"text\" class=\"form-control\" name=\"txtEstadoCategoria\" value=\"\"> </td> <br><br>          \r\n");
+      out.write("                      \r\n");
+      out.write("         \r\n");
+      out.write("               <input type=\"submit\" class=\"btn btn-success btn-sm\" name=\"btnGuardar\" value=\"Guardar\"/>\r\n");
+      out.write("                <input type=\"button\" class=\"btn btn-danger btn-sm\" onclick=\"regresar('");
+      out.print( request.getContextPath() );
+      out.write("/categoriasS.do?opcion=listar')\"\r\n");
+      out.write("                       name=\"btnRegresar\" value=\"Regresar\" />    \r\n");
+      out.write("       </form>  \r\n");
+      out.write(" \r\n");
+      out.write("  </div>\r\n");
+      out.write("</div>\r\n");
+      out.write("  \r\n");
+      out.write("                ");
       out.write("\r\n");
       out.write("\r\n");
       out.write("</div>\r\n");
@@ -98,6 +146,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</div>\r\n");
       out.write("\r\n");
       out.write("    </body>\r\n");
+      out.write("    </center>\r\n");
+      out.write("</html>\r\n");
+      out.write("    </head>\r\n");
       out.write("</html>\r\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

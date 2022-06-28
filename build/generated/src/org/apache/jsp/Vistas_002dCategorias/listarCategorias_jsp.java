@@ -49,10 +49,10 @@ public final class listarCategorias_jsp extends org.apache.jasper.runtime.HttpJs
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("\n");
-      out.write("\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       java.util.List lista = null;
       synchronized (session) {
         lista = (java.util.List) _jspx_page_context.getAttribute("lista", PageContext.SESSION_SCOPE);
@@ -67,11 +67,11 @@ public final class listarCategorias_jsp extends org.apache.jasper.runtime.HttpJs
           _jspx_page_context.setAttribute("lista", lista, PageContext.SESSION_SCOPE);
         }
       }
-      out.write("\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Control de inventario</title>\n");
+      out.write("\r\n");
+      out.write("<html>\r\n");
+      out.write("    <head>\r\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
+      out.write("        <title>Control de inventario</title>\r\n");
       out.write("        ");
       out.write("\r\n");
       out.write("\r\n");
@@ -88,9 +88,10 @@ public final class listarCategorias_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\r\n");
       out.write("<script src=\"bootstrap/js/jquery-3.2.1.js\" type=\"text/javascript\"></script>\r\n");
       out.write("<script src=\"bootstrap/js/jquery-3.2.1.min.js\" type=\"text/javascript\"></script>\r\n");
-      out.write("\n");
-      out.write("    </head>\n");
-      out.write("    <body>\n");
+      out.write("\r\n");
+      out.write("    </head>\r\n");
+      out.write("    <center>\r\n");
+      out.write("    <body>\r\n");
       out.write("        ");
       out.write("\r\n");
       out.write("\r\n");
@@ -98,55 +99,60 @@ public final class listarCategorias_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("    <div class = \"encabezado\">\r\n");
       out.write("        Sistema de Control de Inventario\r\n");
       out.write("        <a href=\"Index\" class=\"btn btn-primary btn-sm\" role=\"button\">Inicio</a>\r\n");
-      out.write("        <a href=\"Categorias?opcion=listar\" class=\"btn btn-primary btn-sm\" role=\"button\">Categorias</a>\r\n");
+      out.write("        <a href=\"categoriasS.do?opcion=listar\" class=\"btn btn-primary btn-sm\" role=\"button\">Categorias</a>\r\n");
+      out.write("         <a href=\"ProductosS.do?opcion=listar\" class=\"btn btn-primary btn-sm\" role=\"button\">Producto</a>\r\n");
       out.write("    </div>\r\n");
       out.write("    <div class=\"contenido\">\r\n");
-      out.write("\n");
-      out.write("        \n");
-      out.write("        <div style=\"width: 600px;\">\n");
+      out.write("\r\n");
+      out.write("        \r\n");
+      out.write("        <div style=\"width: 600px;\">\r\n");
       out.write("            <a href=\"");
       out.print( request.getContextPath() );
-      out.write("/Categorias?opcion=crear\" class=\"btn btn-success btn-sm glyphicon glyphicom-pencil\" role=\"button\"> Nueva Categoria</a>\n");
-      out.write("            <h3>Listado de Categorias Registradas</h3>\n");
-      out.write("            <table class=\"table table-striped\">\n");
-      out.write("                <tr>\n");
-      out.write("                    <th>ID</th><th>NOMBRE</th><th>ESTADO</th><th>ACCION</th>\n");
-      out.write("                </tr>\n");
+      out.write("/categoriasS.do?opcion=crear\" class=\"btn btn-success btn-sm glyphicon glyphicom-pencil\" role=\"button\"> Nueva Categoria</a>\r\n");
+      out.write("            <h3>Listado de Categorias Registradas</h3>\r\n");
+      out.write("            <table class=\"table table-striped\">\r\n");
+      out.write("                <tr>\r\n");
+      out.write("                    <th>ID</th><th>NOMBRE</th><th>ESTADO</th><th>ACCION</th>\r\n");
+      out.write("                </tr>\r\n");
       out.write("                ");
 
                     for(int i =0 ; i < lista.size(); i++){
                         Categoria categoria = new Categoria();
                         categoria = (Categoria)lista.get(i);
                 
-      out.write("\n");
-      out.write("                <tr>\n");
+      out.write("\r\n");
+      out.write("                <tr>\r\n");
       out.write("                    <td>");
       out.print( categoria.getId_categoria() );
-      out.write("</td>\n");
+      out.write("</td>\r\n");
       out.write("                    <td>");
       out.print( categoria.getNom_categoria() );
-      out.write("</td>\n");
+      out.write("</td>\r\n");
       out.write("                    <td>");
       out.print( categoria.getEstado_categoria() );
-      out.write("</td>\n");
-      out.write("                    <td>\n");
-      out.write("                        <a href=\"");
-      out.print( request.getContextPath() );
-      out.write("/Categorias?opcion=editar\" class=\"btn btn-info btn-sm glyphicon glyphicon-edit\"  role=\"button\">Editar</a>\n");
-      out.write("                        <a href=\"Categorias?opcion=eliminar&&id=");
+      out.write("</td>\r\n");
+      out.write("                    <td>\r\n");
+      out.write("                        <a href=\"categoriasS.do?opcion=editar&&id=");
       out.print( categoria.getId_categoria() );
       out.write("&&nombre=");
       out.print( categoria.getNom_categoria() );
-      out.write("\" class=\"btn btn-danger btn-sm glyphicon glyphicon-remove\"  role=\"button\">Eliminar</a>\n");
-      out.write("                    </td>\n");
-      out.write("                </tr>\n");
+      out.write("&&estado=");
+      out.print( categoria.getEstado_categoria() );
+      out.write("\" class=\"btn btn-info btn-sm glyphicon glyphicon-edit\"  role=\"button\"> Editar</a>\r\n");
+      out.write("                        <a href=\"categoriasS.do?opcion=eliminar&&id=");
+      out.print( categoria.getId_categoria() );
+      out.write("&&nombre=");
+      out.print( categoria.getNom_categoria() );
+      out.write("\" class=\"btn btn-danger btn-sm glyphicon glyphicon-remove\"  role=\"button\"> Eliminar</a>\r\n");
+      out.write("                    </td>\r\n");
+      out.write("                </tr>\r\n");
       out.write("                ");
 
                     }
                 
-      out.write("\n");
-      out.write("            </table>\n");
-      out.write("        </div>\n");
+      out.write("\r\n");
+      out.write("            </table>\r\n");
+      out.write("        </div>\r\n");
       out.write("                ");
       out.write("\r\n");
       out.write("\r\n");
@@ -154,9 +160,9 @@ public final class listarCategorias_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("<div class=\"pie\">\r\n");
       out.write("    &COPY;  Alexa A\r\n");
       out.write("</div>\r\n");
-      out.write("</div>\r\n");
-      out.write("\n");
-      out.write("    </body>\n");
+      out.write("\r\n");
+      out.write("    </body>\r\n");
+      out.write("    </center>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
