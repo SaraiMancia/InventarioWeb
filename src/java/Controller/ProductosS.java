@@ -52,7 +52,7 @@ public class ProductosS extends HttpServlet {
          }else if(estado.equals("editar")){
              System.out.println("Editando productos....");
              RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto+
-                     "&&stock="+stock+"&&precio="+precio+"&&unidad de medida"+unidadMedida+"&&estado producto"+estado_p);
+                     "&&stock="+stock+"&&precio="+precio+"&&unidaddemedida"+unidadMedida+"&&estadoproducto"+estado_p);
              dispatcher.forward(request, response);
          }else if(estado.equals("eliminar")){
              System.out.println("Baja de productos...");
