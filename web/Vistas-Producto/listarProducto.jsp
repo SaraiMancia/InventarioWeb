@@ -35,15 +35,9 @@
                     <td><%= producto.getCategoria() %></td>
                     <td>
                         <a href="ProductosS.do?opcion=editar&&id=<%= producto.getId_producto() %>&&nombre=<%= producto.getNom_producto() 
-<<<<<<< Updated upstream
-                        %>&&stock=<%= producto.getStock() %>&&precio=<%= producto.getPrecio() %>&&unidaddemedida=<%= producto.getUnidadMedida() %>&&estadoproducto=<%= producto.getEstado() %>" class="btn btn-info btn-sm glyphicon glyphicon-edit"  role="button"> Editar</a>
-                        <a href="ProductosS.do?opcion=eliminar&&id=<%= producto.getId_producto() %>&&nombre=<%= producto.getNom_producto() 
-                        %>&&stock=<%= producto.getStock() %>&&precio=<%= producto.getPrecio() %>&&unidaddemedida=<%= producto.getUnidadMedida() %>&&estadoproducto=<%= producto.getEstado() %>" class="btn btn-danger btn-sm glyphicon glyphicon-remove"  role="button"> Eliminar</a>
-=======
                         %>&&stock=<%= producto.getStock() %>&&precio=<%= producto.getPrecio() %>&&unidaddemedida=<%= producto.getUnidad_de_medida() %>&&estadoproducto=<%= producto.getEstado_producto() %>" class="btn btn-info btn-sm glyphicon glyphicon-edit"  role="button"> Editar</a>
                         <a href="ProductosS.do?opcion=eliminar&&id=<%= producto.getId_producto() %>&&nombre=<%= producto.getNom_producto() 
                         %>&&stock=<%= producto.getStock() %>&&precio=<%= producto.getPrecio() %>&&unidaddemedida=<%= producto.getUnidad_de_medida() %>&&estadoproducto=<%= producto.getEstado_producto() %>" class="btn btn-danger btn-sm glyphicon glyphicon-remove"  role="button"> Eliminar</a>
->>>>>>> Stashed changes
                     </td>
                 </tr>
                 <%
