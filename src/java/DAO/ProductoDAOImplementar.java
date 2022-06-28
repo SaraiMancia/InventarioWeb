@@ -33,6 +33,11 @@ import java.util.List;
                 prodc.setId_producto(resultadoSQL.getInt("id_producto"));
                 prodc.setNom_producto(resultadoSQL.getString("nom_producto"));
                 prodc.setCategoria_id(resultadoSQL.getInt("categoria_id"));
+                prodc.setStock(resultadoSQL.getFloat("stock"));
+                prodc.setPrecio(resultadoSQL.getFloat("precio"));
+                prodc.setUnidadMedida(resultadoSQL.getString("unidadMedida"));
+                prodc.setEstado(resultadoSQL.getInt("estado"));
+                prodc.setCategoria(resultadoSQL.getCategoria("categoria"));
                 lista.add(prodc);
             }
         }catch(Exception ex){
@@ -44,33 +49,30 @@ import java.util.List;
         return lista;
     
     }
-
+    
     @Override
     public List<Producto> Listar2() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-<<<<<<< Updated upstream
     public Producto editarProd(int id_prod_edit) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-=======
-    public Producto editarCat(int id_prod_edit) {
         this.conn = FactoryConexionBD.open(FactoryConexionBD.MySQL);
-        Producto producto = new Producto();
+      Producto prodc = new Producto();
         StringBuilder miSQL = new StringBuilder();
         miSQL.append("select * from tb_producto where id_producto = ").append(id_prod_edit);
         try{
             ResultSet resultadoSQL = this.conn.consultaSQL(miSQL.toString());
             while(resultadoSQL.next()){
-               producto.setId_producto(resultadoSQL.getInt("id_producto"));
-                producto.setNom_producto(resultadoSQL.getString("nom_producto"));
-                producto.setCategoria_id(resultadoSQL.getInt("categoria_id"));
-                producto.setStock(resultadoSQL.getFloat("stock"));
-                producto.setPrecio(resultadoSQL.getFloat("precio"));
-                producto.setUnidadMedida(resultadoSQL.getString("unidadMedida"));
-                producto.setEstado(resultadoSQL.getInt("estado_p"));
-                producto.setCategoria(resultadoSQL.getCategoria("categoria"));
+                prodc.setId_producto(resultadoSQL.getInt("id_producto"));
+                prodc.setNom_producto(resultadoSQL.getString("nom_producto"));
+                prodc.setCategoria_id(resultadoSQL.getInt("categoria_id"));
+                prodc.setStock(resultadoSQL.getFloat("stock"));
+                prodc.setPrecio(resultadoSQL.getFloat("precio"));
+                prodc.setUnidadMedida(resultadoSQL.getString("unidadMedida"));
+                prodc.setEstado(resultadoSQL.getInt("estado"));
+                prodc.setCategoria(resultadoSQL.getCategoria("categoria"));
+               
             }
             
         }catch(Exception e){
@@ -79,20 +81,11 @@ import java.util.List;
             this.conn.cerrarConexion();
         }
         
-        return producto;
->>>>>>> Stashed changes
+        return prodc;
     }
-
-    @Override
+    
+        @Override
     public boolean guardarProd(Producto producto) {
-<<<<<<< Updated upstream
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean borrarProd(int id_prod_borrar) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-=======
            this.conn = FactoryConexionBD.open(FactoryConexionBD.MySQL);
         boolean guarda = false;
         
@@ -100,18 +93,25 @@ import java.util.List;
             if(producto.getId_producto() == 0){
                 System.out.println("Guardar");
                 StringBuilder miSQL = new StringBuilder();
-                miSQL.append("INSERT INTO tb_producto(nom_producto, estado_producto) VALUES('");
-                miSQL.append(producto.getNom_producto() + "', ").append(producto.getEstado_producto());
+                miSQL.append("INSERT INTO tb_producto(nom_producto, categoria_id, stock, precio, unidadMedida, estado, categoria) VALUES('");
+                miSQL.append(producto.getNom_producto() + "', ").append(producto.getCategoria_id()+ "', ").append(producto.getStock()+ "', ").append(producto.getPrecio()
+                + "', ").append(producto.getUnidadMedida()+ "', ").append(producto.getEstado()+ "', ").append(producto.getCategoria());
                 miSQL.append(");");
                 this.conn.ejecutarSQL(miSQL.toString());
             }else if(producto.getId_producto() > 0){
                 
                System.out.println("Update");
                 StringBuilder miSQL = new StringBuilder();
-                miSQL.append("UPDATE tb_producto SET id_producto = ").append(producto.getId_producto());
-                miSQL.append(", nom_producto = '").append(producto.getNom_producto());
-                  miSQL.append("', estado_producto = ").append(producto.getEstado_producto());
-                miSQL.append(" WHERE id_producto = ").append(producto.getId_producto()).append(";");
+                miSQL.append("UPDATE tb_categoria SET id_categoria = ").append(producto.getId_producto());
+                miSQL.append(", nom_categoria = '").append(producto.getNom_producto());
+                miSQL.append(", categoria_id = ").append(producto.getCategoria_id());
+                miSQL.append(", stock = ").append(producto.getStock());
+                miSQL.append(", precio = ").append(producto.getPrecio());
+                miSQL.append(", unidadMedida = ").append(producto.getUnidadMedida());
+                miSQL.append(", estado = ").append(producto.getEstado());
+                 miSQL.append("', categoria = ").append(producto.getCategoria());
+                
+                miSQL.append(" WHERE id_categoria = ").append(producto.getId_producto()).append(";");
                 this.conn.ejecutarSQL(miSQL.toString());
             }
            guarda = true;
@@ -124,34 +124,12 @@ import java.util.List;
         return guarda;
     }
 
-    @Override
-    public boolean borrarCat(int id_prod_borrar) {
-           this.conn = FactoryConexionBD.open(FactoryConexionBD.MySQL);
-        boolean borra = false;
-        try{
-            StringBuilder miSQL = new StringBuilder();
-            miSQL.append("Delete from tb_producto where id_producto = ").append(id_prod_borrar);
-            this.conn.ejecutarSQL(miSQL.toString());
-            borra = true;
-        }catch(Exception e){
-            
-        }finally{
-            this.conn.cerrarConexion();
-        }
-        
-        return borra;
-    }
-
-    @Override
-    public Producto editarProd(int id_prod_edit) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public boolean borrarProd(int id_prod_borrar) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
->>>>>>> Stashed changes
+
     }
-     }
+     
         

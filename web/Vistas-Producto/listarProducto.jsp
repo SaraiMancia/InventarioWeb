@@ -14,11 +14,11 @@
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         
         <div style="width: 600px;">
-            <a href="<%= request.getContextPath() %>/productosS.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicom-pencil" role="button"> Nueva Categoria</a>
+            <a href="<%= request.getContextPath() %>/ProductosS.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicom-pencil" role="button"> Nuevo producto</a>
             <h3>Listado de Produtos Registrados</h3>
             <table class="table table-striped">
                 <tr>
-                    <th>ID</th><th>NOMBRE</th><th>ESTADO</th><th>ACCION</th>
+                    <th>ID</th><th>NOMBRE</th><th>CATEGORIA ID</th><th>STOCK</th><th>PRECIO</th><th>UNIDAD DE MEDIDA</th><th>ESTADO</th><th>ACCION</th>
                 </tr>
                 <%
                     for(int i =0 ; i < lista.size(); i++){
@@ -28,10 +28,17 @@
                 <tr>
                     <td><%= producto.getId_producto() %></td>
                     <td><%= producto.getNom_producto() %></td>
+                    <td><%= producto.getCategoria_id() %></td>
+                    <td><%= producto.getStock() %></td>
+                    <td><%= producto.getPrecio() %></td>
+                    <td><%= producto.getUnidadMedida() %></td>
                     <td><%= producto.getEstado() %></td>
+                    <td><%= producto.getCategoria() %></td>
                     <td>
-                        <a href="productoS.do?opcion=editar&&id=<%= producto.getId_producto() %>&&nombre=<%= producto.getNom_producto() %>&&estado=<%= producto.getEstado() %>" class="btn btn-info btn-sm glyphicon glyphicon-edit"  role="button"> Editar</a>
-                        <a href="productoS.do?opcion=eliminar&&id=<%= producto.getId_producto() %>&&nombre=<%= producto.getNom_producto() %>" class="btn btn-danger btn-sm glyphicon glyphicon-remove"  role="button"> Eliminar</a>
+                        <a href="ProductoS.do?opcion=editar&&id=<%= producto.getId_producto() %>&&nombre=<%= producto.getNom_producto() %>&&categoria=<%= producto.getCategoria_id()
+                        %>&&stock=<%= producto.getStock() %>&&precio=<%= producto.getPrecio() %>&&unidad de medida=<%= producto.getUnidadMedida() %>&&estado producto=<%= producto.getEstado() %>" class="btn btn-info btn-sm glyphicon glyphicon-edit"  role="button"> Editar</a>
+                        <a href="ProductoS.do?opcion=eliminar&&id=<%= producto.getId_producto() %>&&nombre=<%= producto.getNom_producto() %>&&categoria=<%= producto.getCategoria_id()
+                        %>&&stock=<%= producto.getStock() %>&&precio=<%= producto.getPrecio() %>&&unidad de medida=<%= producto.getUnidadMedida() %>&&estado producto=<%= producto.getEstado() %>" class="btn btn-danger btn-sm glyphicon glyphicon-remove"  role="button"> Eliminar</a>
                     </td>
                 </tr>
                 <%
