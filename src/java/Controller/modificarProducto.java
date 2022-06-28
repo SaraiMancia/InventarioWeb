@@ -54,6 +54,7 @@ public class modificarProducto extends HttpServlet {
          prod.setPrecio(Float.parseFloat(precio));
          prod.setUnidad_de_medida(unidadMedida);
          prod.setEstado_producto(Integer.parseInt(estado_p));
+         
          if(producto.guardarProd(prod)){
              //System.out.println("Registro Actualizado.");
               RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProductos.jsp?aviso=ok");

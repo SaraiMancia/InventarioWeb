@@ -4,11 +4,10 @@
    
     String id_producto = request.getParameter("id");
     String nom_producto = request.getParameter("nombre");
-    String categoria_id = request.getParameter("cat_id");
-    String stock = request.getParameter("Stock");
-    String precio = request.getParameter("Precio");
-    String unidadmedida = request.getParameter("unidadMedida");
-    String estado = request.getParameter("Estado");
+    String stock = request.getParameter("stock");
+    String precio = request.getParameter("precio");
+    String unidadMedida = request.getParameter("unidaddemedida");
+    String estado_p = request.getParameter("estadoproducto");
     String categoria = request.getParameter("Categoria");
     
 
@@ -56,18 +55,18 @@
           <div class="mb-3 row">
           <label for="inputPassword" class="col-sm-2 col-form-label">Unidad de media:</label>
           <div class="col-sm-5">
-              <input type="text" value='<%= unidadmedida %>' name="unidad" id="unidadmedida" class="form-control" placeholder="unidad" required="true">
+              <input type="text" value='<%= unidadMedida %>' name="unidad" id="unidaddemedida" class="form-control" placeholder="unidad" required="true">
           </div>
         </div>
           
           <div class="mb-3 row">
           <label for="inputPassword" class="col-sm-2 col-form-label">Estado:</label>
           <div class="col-sm-5">
-              <input type="text" value='<%= estado %>' name="unidadMedida" id="estado" class="form-control" placeholder="Estado" required="true">
+              <input type="text" value='<%= estado_p %>' name="estadopro" id="estadoproducto" class="form-control" placeholder="Estado" required="true">
           </div>
         </div>
           
-          <div class="mb-3 row">
+          <div class="mb-3 row"
           <label for="inputPassword" class="col-sm-2 col-form-label">Estado Categoria:</label>
           <div class="col-sm-5">
               <input type="text" value='<%= categoria %>' name="Categoria" id="categoria" class="form-control" placeholder="Categoria" required="true">
