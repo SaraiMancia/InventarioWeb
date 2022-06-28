@@ -14,11 +14,12 @@
     <body>
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         
-        <div style="width: 600px;">
-            <a href="<%= request.getContextPath() %>/categoriasS.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicom-pencil" role="button"> Nueva Categoria</a>
+        
             
             <center> <h3>Listado de Categorias Registradas</h3> </center>
-            <center>  <img class="mb-4" src="assets/imgs/listita.jpg" alt="" width="150" height="200"></center>
+            <center>  <img class="mb-4" src="assets/imgs/listita.jpg" alt="" width="185" height="200"></center><br>
+            <div style="width: 600px;">
+                <a href="<%= request.getContextPath() %>/categoriasS.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicom-pencil" role="button"> Nueva Categoria</a><br><br>
             <table class="table table-striped">
                 <tr>
                     <th>ID</th><th>NOMBRE</th><th>ESTADO</th><th>ACCION</th>
