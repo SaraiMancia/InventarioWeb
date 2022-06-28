@@ -8,8 +8,8 @@
     </head>
     <body>
         <%@include file = "WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-        <h1>Resgistrar productos</h1>
-       <img class="mb-4" src="assets/imgs/Productos.png" alt="" width="72" height="57">
+    <center> <h1>Resgistrar productos</h1>
+        <img class="mb-4" src="assets/imgs/Productos.png" alt="" width="150" height="200"></center>
 
         
         <%@include file = "WEB-INF/Vistas-Parciales/pie.jspf" %>
