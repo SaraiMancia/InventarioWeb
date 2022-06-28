@@ -62,6 +62,7 @@
     <link href="css/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
+      <center>  <img class="mb-4" src="assets/imgs/login.jpg" alt="" width="150" height="200"></center>
  
     
 <main class="form-signin w-100 m-auto">
