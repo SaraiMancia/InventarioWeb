@@ -1,8 +1,7 @@
 <%-- any content can be specified here e.g.: --%>
-<%@page import="Model.Producto"%>
 <%@ page  contentType="text/html" pageEncoding="UTF-8" %>
 
-<jsp:useBean id="producto" scope="session" class="Model.Producto"/>
+<jsp:useBean id="Producto" scope="session" class="Model.Producto"/>
 <!DOCTYE html>
 <html>
     <head>
@@ -29,20 +28,20 @@
            
               
                    <td align="right">   Id productos: </td>              
-                   <td>      <input type="hidden" name="id_producto" value="<%= producto.getId_producto() %>"></td> <br><br>          
+                   <td>      <input type="hidden" name="id_producto" value="<%= Producto.getId_producto() %>"></td> <br><br>          
                            
                    <td align="right"> Nombre: </td>                  
-                   <td>    <input type="text" class="form-control" name="txtNom_Producto" value="<%= producto.getNom_producto() %>"></td>  <br><br>         
+                   <td>    <input type="text" class="form-control" name="txtNom_Producto" value="<%= Producto.getNom_producto() %>"></td>  <br><br>         
                    <td align="right"> Stock: </td>                  
-                   <td>    <input type="text" class="form-control" name="txtStock" value="<%= producto.getStock() %>"></td>  <br><br>
+                   <td>    <input type="text" class="form-control" name="txtStock" value="<%= Producto.getStock() %>"></td>  <br><br>
                    <td align="right"> Precio: </td>                  
-                   <td>    <input type="text" class="form-control" name="txtPrecio" value="<%= producto.getPrecio() %>"></td>  <br><br>
+                   <td>    <input type="text" class="form-control" name="txtPrecio" value="<%= Producto.getPrecio() %>"></td>  <br><br>
                    <td align="right"> UnidadMedida: </td>                  
-                   <td>    <input type="text" class="form-control" name="txtunidadMedida" value="<%= producto.getUnidadMedida() %>"></td>  <br><br>
+                   <td>    <input type="text" class="form-control" name="txtunidadMedida" value="<%= Producto.getUnidadMedida() %>"></td>  <br><br>
                    <td align="right"> Estado </td>                  
-                   <td>    <input type="text" class="form-control" name="txtEstado" value="<%= producto.getEstado() %>"
+                   <td>    <input type="text" class="form-control" name="txtEstado" value="<%= Producto.getEstado() %>"
                    <td align="right"> Categoria: </td>                  
-                   <td>    <input type="text" class="form-control" name="txt_Categoria" value="<%= producto.getCategoria() %>"></td>  <br><br>
+                   <td>    <input type="text" class="form-control" name="txt_Categoria" value="<%= Producto.getCategoria() %>"></td>  <br><br>
          
                <input type="submit" class="btn btn-success btn-sm" name="btnGuardar" value="Guardar"/>
                 <input type="button" class="btn btn-danger btn-sm" onclick="regresar('<%= request.getContextPath() %>/ProductosS.do?opcion=listar')"

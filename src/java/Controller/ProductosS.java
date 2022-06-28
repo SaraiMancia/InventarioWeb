@@ -78,7 +78,7 @@ public class ProductosS extends HttpServlet {
        
         producto.setId_producto(Integer.parseInt(request.getParameter("id_producto")));
         producto.setNom_producto(request.getParameter("txtNom_Producto"));
-        producto.setStock(Integer.parseFloat(request.getParameter("txtStock")));
+        producto.setStock(Integer.parseDouble(request.getParameter("txtStock")));
         producto.setPrecio(Integer.parseFloat(request.getParameter("txtPrecio")));
         producto.setUnidadMedida(Integer.parseInt(s));
         

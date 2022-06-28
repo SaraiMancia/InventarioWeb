@@ -28,16 +28,15 @@
                 <tr>
                     <td><%= producto.getId_producto() %></td>
                     <td><%= producto.getNom_producto() %></td>
-                    <td><%= producto.getCategoria_id() %></td>
                     <td><%= producto.getStock() %></td>
                     <td><%= producto.getPrecio() %></td>
                     <td><%= producto.getUnidadMedida() %></td>
                     <td><%= producto.getEstado() %></td>
                     <td><%= producto.getCategoria() %></td>
                     <td>
-                        <a href="ProductoS.do?opcion=editar&&id=<%= producto.getId_producto() %>&&nombre=<%= producto.getNom_producto() %>&&categoria=<%= producto.getCategoria_id()
+                        <a href="ProductoS.do?opcion=editar&&id=<%= producto.getId_producto() %>&&nombre=<%= producto.getNom_producto() 
                         %>&&stock=<%= producto.getStock() %>&&precio=<%= producto.getPrecio() %>&&unidad de medida=<%= producto.getUnidadMedida() %>&&estado producto=<%= producto.getEstado() %>" class="btn btn-info btn-sm glyphicon glyphicon-edit"  role="button"> Editar</a>
-                        <a href="ProductoS.do?opcion=eliminar&&id=<%= producto.getId_producto() %>&&nombre=<%= producto.getNom_producto() %>&&categoria=<%= producto.getCategoria_id()
+                        <a href="ProductoS.do?opcion=eliminar&&id=<%= producto.getId_producto() %>&&nombre=<%= producto.getNom_producto() 
                         %>&&stock=<%= producto.getStock() %>&&precio=<%= producto.getPrecio() %>&&unidad de medida=<%= producto.getUnidadMedida() %>&&estado producto=<%= producto.getEstado() %>" class="btn btn-danger btn-sm glyphicon glyphicon-remove"  role="button"> Eliminar</a>
                     </td>
                 </tr>
