@@ -45,7 +45,7 @@ protected void listaProducto(HttpServletRequest request, HttpServletResponse res
          String precio_pro= request.getParameter("precio");
          String unidad_pro = request.getParameter("unidadM");
          String estado_pro = request.getParameter("est");
-         String cate_pro= request.getCategoria("categ");
+         String cate_pro= request.getProductos("categ");
    
          /*
          System.out.println("La opcion es: " + estado);
