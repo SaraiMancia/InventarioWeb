@@ -6,7 +6,7 @@
         <title>Control de inventario</title>
         <%@include file = "WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
-    <body>
+    <body background="assets/imgs/Fondo.jpg">
         <%@include file = "WEB-INF/Vistas-Parciales/encabezado.jspf" %>
     <center> <h1>Resgistrar productos</h1>
         <img class="mb-4" src="assets/imgs/Productos.png" alt="" width="150" height="200"></center>
