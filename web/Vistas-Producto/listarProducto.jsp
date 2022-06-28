@@ -10,9 +10,8 @@
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
     <center>
-    <body>
+    <body background="assets/imgs/imgProd.jpg">
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-        
         <div style="width: 600px;">
             <a href="<%= request.getContextPath() %>/ProductosS.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicom-pencil" role="button"> Nuevo producto</a>
             <h3>Listado de Produtos Registrados</h3>
@@ -46,6 +45,7 @@
             </table>
         </div>
                 <%@include file = "../WEB-INF/Vistas-Parciales/pie.jspf" %>
+               
     </body>
     </center>
 </html>

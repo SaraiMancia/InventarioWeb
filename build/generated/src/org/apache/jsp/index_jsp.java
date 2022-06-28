@@ -94,7 +94,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("</div>\r\n");
       out.write("<div class=\"pie\">\r\n");
-      out.write("    &COPY;  Alexa A\r\n");
+      out.write("    &COPY;  Alexa A - Michell M - Melani M - Yuleidy D    \r\n");
       out.write("</div>\r\n");
       out.write("\r\n");
       out.write("    </body>\r\n");
