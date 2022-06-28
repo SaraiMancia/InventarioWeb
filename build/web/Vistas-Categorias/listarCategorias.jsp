@@ -7,6 +7,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Control de inventario</title>
+        
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
     <center>
@@ -15,7 +16,9 @@
         
         <div style="width: 600px;">
             <a href="<%= request.getContextPath() %>/categoriasS.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicom-pencil" role="button"> Nueva Categoria</a>
-            <h3>Listado de Categorias Registradas</h3>
+            
+            <center> <h3>Listado de Categorias Registradas</h3> </center>
+            <center>  <img class="mb-4" src="assets/imgs/listita.jpg" alt="" width="150" height="200"></center>
             <table class="table table-striped">
                 <tr>
                     <th>ID</th><th>NOMBRE</th><th>ESTADO</th><th>ACCION</th>
