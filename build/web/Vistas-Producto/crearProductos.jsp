@@ -23,7 +23,7 @@
        <div class="card text-center" style="width: 18rem;">
   
   <h5 class="card-title"></h5>
-    <p class="card-text"> <h2> Aqui se piden los datos </h2>    
+    <p class="card-text">   
        <p>  Por favor introduce la información:</p> 
               
            
@@ -33,10 +33,6 @@
                            
                    <td align="right"> Nombre: </td>                  
                    <td>    <input type="text" class="form-control" name="txtNom_Producto" value="<%= producto.getNom_producto() %>"></td>  <br><br>         
-                     <td align="right"> Categoria: </td>                  
-                   <td>    <input type="text" class="form-control" name="txt_Categoria" value="<%= producto.getCategoria() %>"></td>  <br><br>
-                      <td align="right"> cat_id: </td>                  
-                   <td>    <input type="text" class="form-control" name="txtcat_id" value="<%= producto .getCategoria() %>"></td>  <br><br>
                    <td align="right"> Stock: </td>                  
                    <td>    <input type="text" class="form-control" name="txtStock" value="<%= producto.getStock() %>"></td>  <br><br>
                    <td align="right"> Precio: </td>                  
@@ -45,6 +41,8 @@
                    <td>    <input type="text" class="form-control" name="txtunidadMedida" value="<%= producto.getUnidadMedida() %>"></td>  <br><br>
                    <td align="right"> Estado </td>                  
                    <td>    <input type="text" class="form-control" name="txtEstado" value="<%= producto.getEstado() %>"
+                   <td align="right"> Categoria: </td>                  
+                   <td>    <input type="text" class="form-control" name="txt_Categoria" value="<%= producto.getCategoria() %>"></td>  <br><br>
          
                <input type="submit" class="btn btn-success btn-sm" name="btnGuardar" value="Guardar"/>
                 <input type="button" class="btn btn-danger btn-sm" onclick="regresar('<%= request.getContextPath() %>/ProductosS.do?opcion=listar')"

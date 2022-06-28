@@ -39,16 +39,20 @@ public class modificarProducto extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         //String estado = request.getParameter("opcion");
-         String id_cat = request.getParameter("id");
-         String nombre_cat = request.getParameter("nombre");
-         String estado_cat = request.getParameter("estado");
-       
+         String id_producto = request.getParameter("id");
+         String nom_producto = request.getParameter("nombre");
+         String categoria_id = request.getParameter("categoria");
+         String stock = request.getParameter("stock");
+         String precio = request.getParameter("precio");
+         String unidadMedida = request.getParameter("unidad de medida");
+         String estado_p = request.getParameter("estado producto");
+    
          ProductoDAO producto = new ProductoDAOImplementar();
          Producto prod = new Producto();
          prod.setId_producto(Integer.parseInt(id_producto));
          prod.setNom_producto(nom_producto);
-         prod.setEstado_producto(Integer.parseInt(estado_producto));
-         if(producto.guardarProducto(prod)){
+         prod.setCategoria_id(Integer.parseInt(categoria_id));
+         if(producto.guardarProd(prod)){
              //System.out.println("Registro Actualizado.");
               RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProductos.jsp?aviso=ok");
               dispatcher.forward(request, response);

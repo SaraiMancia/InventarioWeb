@@ -40,7 +40,6 @@ public class ProductosS extends HttpServlet {
          String estado = request.getParameter("opcion");
          String id_producto = request.getParameter("id");
          String nom_producto = request.getParameter("nombre");
-         String categoria_id = request.getParameter("categoria");
          String stock = request.getParameter("stock");
          String precio = request.getParameter("precio");
          String unidadMedida = request.getParameter("unidad de medida");
@@ -52,12 +51,12 @@ public class ProductosS extends HttpServlet {
              this.listaProducto(request, response);
          }else if(estado.equals("editar")){
              System.out.println("Editando productos....");
-             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto+"&&categoria="+categoria_id+
+             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto+
                      "&&stock="+stock+"&&precio="+precio+"&&unidad de medida"+unidadMedida+"&&estado producto"+estado_p);
              dispatcher.forward(request, response);
          }else if(estado.equals("eliminar")){
              System.out.println("Baja de productos...");
-             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/eliminarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto+"&&categoria="+categoria_id+
+             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/eliminarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto+
                      "&&stock="+stock+"&&precio="+precio+"&&unidad de medida"+unidadMedida+"&&estado producto"+estado_p);
              dispatcher.forward(request, response);
          }else if(estado.equals("crear")){
@@ -78,8 +77,11 @@ public class ProductosS extends HttpServlet {
        Producto producto = new Producto();
        
         producto.setId_producto(Integer.parseInt(request.getParameter("id_producto")));
-        producto.setNom_producto(request.getParameter("txtNomProducto"));
-        producto.setEstado(Integer.parseInt(request.getParameter("txtEstadoProducto")));
+        producto.setNom_producto(request.getParameter("txtNom_Producto"));
+        producto.setStock(Integer.parseFloat(request.getParameter("txtStock")));
+        producto.setPrecio(Integer.parseFloat(request.getParameter("txtPrecio")));
+        producto.setUnidadMedida(Integer.parseInt(s));
+        
 
         ProductoDAO guardarProducto = new ProductoDAOImplementar();
         guardarProducto.guardarProd(producto);

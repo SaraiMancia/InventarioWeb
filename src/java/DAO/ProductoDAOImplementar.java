@@ -32,7 +32,6 @@ import java.util.List;
                 Producto prodc = new Producto();
                 prodc.setId_producto(resultadoSQL.getInt("id_producto"));
                 prodc.setNom_producto(resultadoSQL.getString("nom_producto"));
-                prodc.setCategoria_id(resultadoSQL.getInt("categoria_id"));
                 prodc.setStock(resultadoSQL.getFloat("stock"));
                 prodc.setPrecio(resultadoSQL.getFloat("precio"));
                 prodc.setUnidadMedida(resultadoSQL.getString("unidadMedida"));
@@ -66,7 +65,6 @@ import java.util.List;
             while(resultadoSQL.next()){
                 prodc.setId_producto(resultadoSQL.getInt("id_producto"));
                 prodc.setNom_producto(resultadoSQL.getString("nom_producto"));
-                prodc.setCategoria_id(resultadoSQL.getInt("categoria_id"));
                 prodc.setStock(resultadoSQL.getFloat("stock"));
                 prodc.setPrecio(resultadoSQL.getFloat("precio"));
                 prodc.setUnidadMedida(resultadoSQL.getString("unidadMedida"));
@@ -93,8 +91,8 @@ import java.util.List;
             if(producto.getId_producto() == 0){
                 System.out.println("Guardar");
                 StringBuilder miSQL = new StringBuilder();
-                miSQL.append("INSERT INTO tb_producto(nom_producto, categoria_id, stock, precio, unidadMedida, estado, categoria) VALUES('");
-                miSQL.append(producto.getNom_producto() + "', ").append(producto.getCategoria_id()+ "', ").append(producto.getStock()+ "', ").append(producto.getPrecio()
+                miSQL.append("INSERT INTO tb_producto(nom_producto, stock, precio, unidadMedida, estado, categoria) VALUES('");
+                miSQL.append(producto.getNom_producto() + "', ").append(producto.getStock()+ "', ").append(producto.getPrecio()
                 + "', ").append(producto.getUnidadMedida()+ "', ").append(producto.getEstado()+ "', ").append(producto.getCategoria());
                 miSQL.append(");");
                 this.conn.ejecutarSQL(miSQL.toString());
@@ -104,7 +102,6 @@ import java.util.List;
                 StringBuilder miSQL = new StringBuilder();
                 miSQL.append("UPDATE tb_categoria SET id_categoria = ").append(producto.getId_producto());
                 miSQL.append(", nom_categoria = '").append(producto.getNom_producto());
-                miSQL.append(", categoria_id = ").append(producto.getCategoria_id());
                 miSQL.append(", stock = ").append(producto.getStock());
                 miSQL.append(", precio = ").append(producto.getPrecio());
                 miSQL.append(", unidadMedida = ").append(producto.getUnidadMedida());

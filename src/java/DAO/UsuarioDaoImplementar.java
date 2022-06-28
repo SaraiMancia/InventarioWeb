@@ -89,6 +89,11 @@ public class UsuarioDaoImplementar implements UsuarioDAO{
               System.out.println("El valor máximo de i es: " + i);
             } 
       }
+
+    @Override
+    public Usuario editarCat(int id_cat_edit) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }
