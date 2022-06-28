@@ -13,14 +13,14 @@ public class Producto {
     private float precio;
     private String unidad_de_medida;
     private int estado_producto;
-    private Categoria categoria;
-    
+    //private Categoria categoria;
+    private int categoria;
     public Producto() {
          this.id_producto = 0;
-         this.categoria = new Categoria();
+        // this.categoria = new Categoria();
     }
 
-    public Producto(int id_producto, String nom_producto, float stock, float precio, String unidad_de_medida, int estado_producto, Categoria categoria) {
+    public Producto(int id_producto, String nom_producto, float stock, float precio, String unidad_de_medida, int estado_producto, int categoria) {
         this.id_producto = id_producto;
         this.nom_producto = nom_producto;
         this.stock = stock;
@@ -79,11 +79,11 @@ public class Producto {
         this.estado_producto = estado;
     }
 
-    public Categoria getCategoria() {
+    public int getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Categoria categoria) {
+    public void setCategoria(int categoria) {
         this.categoria = categoria;
     }
 }

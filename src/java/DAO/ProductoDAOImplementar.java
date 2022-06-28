@@ -36,7 +36,7 @@ import java.util.List;
                 prodc.setPrecio(resultadoSQL.getFloat("precio"));
                 prodc.setUnidad_de_medida(resultadoSQL.getString("unidad_de_medida"));
                 prodc.setEstado_producto(resultadoSQL.getInt("estado_producto"));
-                prodc.setCategoria(resultadoSQL.getCategoria("categoria"));
+                prodc.setCategoria(resultadoSQL.getInt("categoria"));
                 lista.add(prodc);
             }
         }catch(Exception ex){
@@ -69,7 +69,7 @@ import java.util.List;
                 prodc.setPrecio(resultadoSQL.getFloat("precio"));
                 prodc.setUnidad_de_medida(resultadoSQL.getString("unidad_de_medida"));
                 prodc.setEstado_producto(resultadoSQL.getInt("estado_producto"));
-                prodc.setCategoria(resultadoSQL.getCategoria("categoria"));
+                prodc.setCategoria(resultadoSQL.getInt("categoria"));
                
             }
             
