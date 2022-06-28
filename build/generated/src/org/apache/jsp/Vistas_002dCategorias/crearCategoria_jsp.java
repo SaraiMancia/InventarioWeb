@@ -108,12 +108,12 @@ public final class crearCategoria_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("  <div class=\"card-body\">\r\n");
       out.write("  <h5 class=\"card-title\"></h5>\r\n");
       out.write("    <p class=\"card-text\"> \r\n");
-      out.write("       <p>  Por favor introduce la información:</p> \r\n");
+      out.write("    <p> <center> Por favor introduce la información:</p> </center>\r\n");
       out.write("          <form class=\"form-horizantal\" id=\"frmCategoria\" name=\"frmCategoria\" action=\"");
       out.print( request.getContextPath());
       out.write("/categoriasS.do\" method=\"post\">    \r\n");
       out.write("           \r\n");
-      out.write("              \r\n");
+      out.write("              <center>  <img class=\"mb-4\" src=\"assets/imgs/imgPrincipal.png\" alt=\"\" width=\"150\" height=\"200\"></center>\r\n");
       out.write("                   <td align=\"right\">   Id categoria: </td>              \r\n");
       out.write("                   <td>      <input type=\"hidden\" name=\"id_categoria\" value=\"");
       out.print( Categoria.getId_categoria() );
