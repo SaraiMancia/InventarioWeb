@@ -106,7 +106,7 @@ public final class principal_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.print( nombres );
       out.write("</h3>\r\n");
       out.write("        \r\n");
-      out.write("        <img class=\"mb-4\" src=\"assets/imgs/imgPrincipal\" alt=\"\" width=\"150\" height=\"200\"></center>\r\n");
+      out.write("        <img class=\"mb-4\" src=\"assets/imgs/imgPrincipal.jpg\" alt=\"\" width=\"150\" height=\"200\"></center>\r\n");
       out.write("    \r\n");
       out.write("        ");
       out.write("\r\n");
