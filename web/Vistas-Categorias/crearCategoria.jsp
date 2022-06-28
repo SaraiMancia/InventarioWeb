@@ -23,10 +23,10 @@
   <div class="card-body">
   <h5 class="card-title"></h5>
     <p class="card-text"> 
-       <p>  Por favor introduce la información:</p> 
+    <p> <center> Por favor introduce la información:</p> </center>
           <form class="form-horizantal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath()%>/categoriasS.do" method="post">    
            
-              
+              <center>  <img class="mb-4" src="assets/imgs/imgPrincipal.png" alt="" width="150" height="200"></center>
                    <td align="right">   Id categoria: </td>              
                    <td>      <input type="hidden" name="id_categoria" value="<%= Categoria.getId_categoria() %>"></td> <br><br>          
                            

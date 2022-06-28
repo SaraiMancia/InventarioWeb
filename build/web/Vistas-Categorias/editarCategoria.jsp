@@ -25,18 +25,20 @@
   <div class="card-body">
   <h5 class="card-title"></h5>
     <p class="card-text"> 
- <h1 class='text-center'>Información de Categoria</h1>
-        <form action="modificarCategoria.do" method="post">
+    <center> <h1 class='text-center'>Información de Categoria</h1> </center>
+    <center><form action="modificarCategoria.do" method="post"></center>
+            <center>  <img class="mb-4" src="assets/imgs/notas.jpg" alt="" width="150" height="200"></center>
         <div class="mb-3 row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">ID Categoria:</label>
+            <label for="staticEmail" class="col-sm-2 col-form-label">ID Categoria:</label><br><br>
             <div class="col-sm-10">
+                
               <input type="text" value='<%= id_cat %>' name="id1" id="id1" readonly class="form-control-plaintext" id="staticEmail" placeholder="ID Categoria">
               <input type="hidden" value='<%= id_cat %>' name="id" id="id" readonly class="form-control-plaintext" id="staticEmail" >
             </div>
         </div>
-                   <td align="right"> Nombre: </td>                  
+            <center> <td align="right"> Nombre: </td> </center>                 
                    <td>    <input type="text" value='<%= nombre_cat %>' name="nombre" id="nombre" class="form-control" placeholder="Nombre Categoria" required="true"></td>  <br><br>         
-                      <td align="right"> Estado: </td>                  
+                   <center> <td align="right"> Estado: </td>  </center>                
                       <td>      <input type="text" value='<%= estado_cat %>' name="estado" id="estado" class="form-control" placeholder="Estado Categoria" required="true"> </td> <br><br>          
                       
  
