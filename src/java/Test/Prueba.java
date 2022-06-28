@@ -15,23 +15,27 @@ public class Prueba {
         Prueba evaluar = new Prueba();
        //evaluar.editarCategoria();
        evaluar.guardarProducto();
-        evaluar.listarcategorias();
+        evaluar.listarProducto();
         //evaluar.eliminarCategoria();
-        evaluar.listarcategorias();
+        evaluar.listarProducto();
         
     }
     
     
-    public void listarcategorias(){
-        CategoriaDAO categoria = new CategoriaDAOImplementar();        
+    public void listarProducto(){
+        ProductoDAO pro = new ProductoDAOImplementar();        
         //Prueba Listar
         
-        List<Categoria> listar = categoria.Listar();
+        List<Producto> listar = pro.Listar();
         System.out.println("Listado de categorias");
-        for(Categoria categoriaListar: listar){
-            System.out.println("ID: " + categoriaListar.getId_categoria() +
-                    "Nombre: " + categoriaListar.getNom_categoria() +
-                    "Estado: " + categoriaListar.getEstado_categoria());
+        for(Producto prodListar: listar){
+            System.out.println("ID: " + prodListar.getId_producto() +
+                    "Nombre: " + prodListar.getNom_producto() +
+                    "Stock: " + prodListar.getStock() +
+                    "Precio: " + prodListar.getPrecio() +
+                    "Unidad de medida: " + prodListar.getUnidad_de_medida() +
+                    "Estado: " + prodListar.getEstado_producto()+
+                    "categoria: " + prodListar.getCategoria());
         }
     }
       public void editarCategoria(){
@@ -51,6 +55,9 @@ public class Prueba {
         guardar_prod.setNom_producto("Bebidas");
         //guardar_cat.setId_categoria();
         guardar_prod.setStock(4);
+         guardar_prod.setPrecio((float) 0.35);
+          guardar_prod.setUnidad_de_medida("2 lb"); 
+           guardar_prod.setEstado_producto(2);
         p.guardarProd(guardar_prod);
        
     }

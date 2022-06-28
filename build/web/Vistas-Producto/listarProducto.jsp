@@ -17,7 +17,7 @@
             <h3>Listado de Produtos Registrados</h3>
             <table class="table table-striped">
                 <tr>
-                    <th>ID</th><th>NOMBRE</th><th>CATEGORIA ID</th><th>STOCK</th><th>PRECIO</th><th>UNIDAD DE MEDIDA</th><th>ESTADO</th><th>ACCION</th>
+                    <th>ID</th><th>NOMBRE</th><th>STOCK</th><th>PRECIO</th><th>UNIDAD DE MEDIDA</th><th>ESTADO</th><th>CATEGORIA</th><th>ACCION</th>
                 </tr>
                 <%
                     for(int i =0 ; i < lista.size(); i++){

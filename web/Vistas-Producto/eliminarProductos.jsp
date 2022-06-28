@@ -19,7 +19,7 @@
             
             <h4>¿ Desea Eliminar el Registro?</h4><br>
             <h5>ID Producto: <%= id_cat %></h5>
-            <h5>Nombre producto: <%= nom_producto %></h5>
+            <h5>Nombre producto: <%= nombre_producto %></h5>
         </div>
         
         <!---->
