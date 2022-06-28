@@ -24,6 +24,9 @@
     <body>
         <%@include file = "WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         <h3 style="text-align: center; width: 100%;">BIENVENID@S: <%= nombres %></h3>
+        
+        <img class="mb-4" src="assets/imgs/imgPrincipal" alt="" width="150" height="200"></center>
+    
         <%@include file = "WEB-INF/Vistas-Parciales/pie.jspf" %>
     </body>
 </html>
