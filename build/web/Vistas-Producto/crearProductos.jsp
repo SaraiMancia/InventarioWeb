@@ -37,9 +37,9 @@
                    <td align="right"> Precio: </td>                  
                    <td>    <input type="text" class="form-control" name="txtPrecio" value="<%= Producto.getPrecio() %>"></td>  <br><br>
                    <td align="right"> UnidadMedida: </td>                  
-                   <td>    <input type="text" class="form-control" name="txtunidadMedida" value="<%= Producto.getUnidadMedida() %>"></td>  <br><br>
+                   <td>    <input type="text" class="form-control" name="txtunidadMedida" value="<%= Producto.getUnidad_de_medida() %>"></td>  <br><br>
                    <td align="right"> Estado </td>                  
-                   <td>    <input type="text" class="form-control" name="txtEstado" value="<%= Producto.getEstado() %>"
+                   <td>    <input type="text" class="form-control" name="txtEstado" value="<%= Producto.getEstado_producto() %>"
                    <td align="right"> Categoria: </td>                  
                    <td>    <input type="text" class="form-control" name="txt_Categoria" value="<%= Producto.getCategoria() %>"></td>  <br><br>
          

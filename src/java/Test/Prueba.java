@@ -3,7 +3,10 @@ package Test;
 
 import DAO.CategoriaDAO;
 import DAO.CategoriaDAOImplementar;
+import DAO.ProductoDAO;
+import DAO.ProductoDAOImplementar;
 import Model.Categoria;
+import Model.Producto;
 import java.util.List;
 
 
@@ -11,7 +14,7 @@ public class Prueba {
        public static void main(String[] args) {
         Prueba evaluar = new Prueba();
        //evaluar.editarCategoria();
-       evaluar.guardarCatgoria();
+       evaluar.guardarProducto();
         evaluar.listarcategorias();
         //evaluar.eliminarCategoria();
         evaluar.listarcategorias();
@@ -41,15 +44,15 @@ public class Prueba {
     }
       
          
-    public void guardarCatgoria(){
-        CategoriaDAO categoria = new CategoriaDAOImplementar();
-        Categoria guardar_cat = new Categoria();
+    public void guardarProducto(){
+        ProductoDAO p = new ProductoDAOImplementar();
+        Producto guardar_prod = new Producto();
         //Lo nuevo es seteo del id
-        guardar_cat.setNom_categoria("Bebidas");
+        guardar_prod.setNom_producto("Bebidas");
         //guardar_cat.setId_categoria();
-        guardar_cat.setEstado_categoria(4);
-        categoria.guardarCat(guardar_cat);
-        
+        guardar_prod.setStock(4);
+        p.guardarProd(guardar_prod);
+       
     }
     public void eliminarCategoria(){
         CategoriaDAO categoria = new CategoriaDAOImplementar();

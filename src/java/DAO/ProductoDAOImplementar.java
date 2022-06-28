@@ -34,8 +34,8 @@ import java.util.List;
                 prodc.setNom_producto(resultadoSQL.getString("nom_producto"));
                 prodc.setStock(resultadoSQL.getFloat("stock"));
                 prodc.setPrecio(resultadoSQL.getFloat("precio"));
-                prodc.setUnidadMedida(resultadoSQL.getString("unidadMedida"));
-                prodc.setEstado(resultadoSQL.getInt("estado"));
+                prodc.setUnidad_de_medida(resultadoSQL.getString("unidad_de_medida"));
+                prodc.setEstado_producto(resultadoSQL.getInt("estado_producto"));
                 prodc.setCategoria(resultadoSQL.getCategoria("categoria"));
                 lista.add(prodc);
             }
@@ -67,8 +67,8 @@ import java.util.List;
                 prodc.setNom_producto(resultadoSQL.getString("nom_producto"));
                 prodc.setStock(resultadoSQL.getFloat("stock"));
                 prodc.setPrecio(resultadoSQL.getFloat("precio"));
-                prodc.setUnidadMedida(resultadoSQL.getString("unidadMedida"));
-                prodc.setEstado(resultadoSQL.getInt("estado"));
+                prodc.setUnidad_de_medida(resultadoSQL.getString("unidad_de_medida"));
+                prodc.setEstado_producto(resultadoSQL.getInt("estado_producto"));
                 prodc.setCategoria(resultadoSQL.getCategoria("categoria"));
                
             }
@@ -91,9 +91,9 @@ import java.util.List;
             if(producto.getId_producto() == 0){
                 System.out.println("Guardar");
                 StringBuilder miSQL = new StringBuilder();
-                miSQL.append("INSERT INTO tb_producto(nom_producto, stock, precio, unidadMedida, estado, categoria) VALUES('");
+                miSQL.append("INSERT INTO tb_producto(nom_producto, stock, precio, unidad_de_medida, estado_producto, categoria) VALUES('");
                 miSQL.append(producto.getNom_producto() + "', ").append(producto.getStock()+ "', ").append(producto.getPrecio()
-                + "', ").append(producto.getUnidadMedida()+ "', ").append(producto.getEstado()+ "', ").append(producto.getCategoria());
+                + "', ").append(producto.getUnidad_de_medida()+ "', ").append(producto.getEstado_producto()+ "', ").append(producto.getCategoria());
                 miSQL.append(");");
                 this.conn.ejecutarSQL(miSQL.toString());
             }else if(producto.getId_producto() > 0){
@@ -104,8 +104,8 @@ import java.util.List;
                 miSQL.append(", nom_categoria = '").append(producto.getNom_producto());
                 miSQL.append(", stock = ").append(producto.getStock());
                 miSQL.append(", precio = ").append(producto.getPrecio());
-                miSQL.append(", unidadMedida = ").append(producto.getUnidadMedida());
-                miSQL.append(", estado = ").append(producto.getEstado());
+                miSQL.append(", unidad_de_medida = ").append(producto.getUnidad_de_medida());
+                miSQL.append(", estado_producto = ").append(producto.getEstado_producto());
                  miSQL.append("', categoria = ").append(producto.getCategoria());
                 
                 miSQL.append(" WHERE id_categoria = ").append(producto.getId_producto()).append(";");

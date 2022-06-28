@@ -11,8 +11,8 @@ public class Producto {
     private String nom_producto;
     private float stock;
     private float precio;
-    private String unidadMedida;
-    private int estado;
+    private String unidad_de_medida;
+    private int estado_producto;
     private Categoria categoria;
     
     public Producto() {
@@ -20,13 +20,13 @@ public class Producto {
          this.categoria = new Categoria();
     }
 
-    public Producto(int id_producto, String nom_producto, float stock, float precio, String unidadMedida, int estado, Categoria categoria) {
+    public Producto(int id_producto, String nom_producto, float stock, float precio, String unidad_de_medida, int estado_producto, Categoria categoria) {
         this.id_producto = id_producto;
         this.nom_producto = nom_producto;
         this.stock = stock;
         this.precio = precio;
-        this.unidadMedida = unidadMedida;
-        this.estado = estado;
+        this.unidad_de_medida = unidad_de_medida;
+        this.estado_producto= estado_producto;
         this.categoria = categoria;
     }
     
@@ -63,20 +63,20 @@ public class Producto {
         this.precio = precio;
     }
 
-    public String getUnidadMedida() {
-        return unidadMedida;
+    public String getUnidad_de_medida() {
+        return unidad_de_medida;
     }
 
-    public void setUnidadMedida(String unidadMedida) {
-        this.unidadMedida = unidadMedida;
+    public void setUnidad_de_medida(String unidadMedida) {
+        this.unidad_de_medida = unidadMedida;
     }
 
-    public int getEstado() {
-        return estado;
+    public int getEstado_producto() {
+        return estado_producto;
     }
 
-    public void setEstado(int estado) {
-        this.estado = estado;
+    public void setEstado_producto(int estado) {
+        this.estado_producto = estado;
     }
 
     public Categoria getCategoria() {
