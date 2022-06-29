@@ -14,12 +14,13 @@
             }
         </script>
     </head>
+    <center>
     <body>
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         
         <h3>Mantenimiento Productos</h3>
              
-       <div class="card text-center" style="width: 18rem;">
+       <div class="card text-center" style="width: 30rem;">
   
   <h5 class="card-title"></h5>
     <p class="card-text">   
@@ -53,6 +54,7 @@
   
                 <%@include file="../WEB-INF/Vistas-Parciales/pie.jspf" %>
     </body>
+    </center>
 </html>
     </head>
 </html>

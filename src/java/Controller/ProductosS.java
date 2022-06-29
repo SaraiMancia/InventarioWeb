@@ -42,8 +42,8 @@ public class ProductosS extends HttpServlet {
          String nom_producto = request.getParameter("nombre");
          String stock = request.getParameter("stock");
          String precio = request.getParameter("precio");
-         String unidadMedida = request.getParameter("unidad de medida");
-         String estado_p = request.getParameter("estado producto");
+         String unidadMedida = request.getParameter("unidaddemedida");
+         String estado_p = request.getParameter("estadoproducto");
     
 
     
@@ -81,6 +81,7 @@ public class ProductosS extends HttpServlet {
         producto.setStock(Integer.parseInt(request.getParameter("txtStock")));
         producto.setPrecio(Float.parseFloat(request.getParameter("txtPrecio")));
         producto.setUnidad_de_medida(request.getParameter("txtunidadMedida"));
+        producto.setEstado_producto(Integer.parseInt(request.getParameter("txtEstado")));
         
 
         ProductoDAO guardarProducto = new ProductoDAOImplementar();

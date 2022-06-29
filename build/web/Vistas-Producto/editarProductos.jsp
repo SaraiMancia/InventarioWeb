@@ -75,6 +75,7 @@
           
           <div class="mb-3 row">
           <button type="submit" name="send" class="btn btn-success">Actualizar Producto</button>
+           <input type="button" class="btn btn-danger btn-sm" onclick="regresar('<%= request.getContextPath() %>/ProductosS.do?opcion=listar')" name="btnRegresar" value="Regresar" />
           </div>
         </form>
           
