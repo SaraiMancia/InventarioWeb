@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <%
     ////request.getContextPath()
-    String id_cat = request.getParameter("id");
+    String id_producto = request.getParameter("id");
     String nombre_producto = request.getParameter("nombre");
 %>
 <html>
@@ -18,16 +18,16 @@
         
             
             <h4>¿ Desea Eliminar el Registro?</h4><br>
-            <h5>ID Producto: <%= id_cat %></h5>
+            <h5>ID Producto: <%= id_producto %></h5>
             <h5>Nombre producto: <%= nombre_producto %></h5>
         </div>
         
         <!---->
         
         <div class="d-grid gap-5 d-md-flex justify-content-md-center">
-            <a href="eliminarCategoria.do?respuesta=yes&&id=<%= id_cat %>" class="btn btn-primary btn-lg" role="button"> Aceptar</a>
+            <a href="eliminarProducto.do?respuesta=yes&&id=<%= id_producto %>" class="btn btn-primary btn-lg" role="button"> Aceptar</a>
             <!--<a href="< //request.getContextPath() >" class="btn btn-secondary btn-lg" role="button">No / Cancelar</a>-->
-            <a href="categoriasS.do?opcion=listar" class="btn btn-primary btn-lg" role="button"> Cancelar</a>
+            <a href="ProductosS.do?opcion=listar" class="btn btn-primary btn-lg" role="button"> Cancelar</a>
             
         </div>
         

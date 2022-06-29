@@ -45,6 +45,7 @@ public class modificarProducto extends HttpServlet {
          String precio = request.getParameter("precio");
          String unidadMedida = request.getParameter("unidaddemedida");
          String estado_p = request.getParameter("estadoproducto");
+         String cat = request.getParameter("categoria");
     
          ProductoDAO producto = new ProductoDAOImplementar();
          Producto prod = new Producto();
@@ -54,6 +55,7 @@ public class modificarProducto extends HttpServlet {
          prod.setPrecio(Float.parseFloat(precio));
          prod.setUnidad_de_medida(unidadMedida);
          prod.setEstado_producto(Integer.parseInt(estado_p));
+         prod.setCategoria(Integer.parseInt(cat));
          
          if(producto.guardarProd(prod)){
              //System.out.println("Registro Actualizado.");

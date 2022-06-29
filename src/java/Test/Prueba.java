@@ -13,11 +13,11 @@ import java.util.List;
 public class Prueba {
        public static void main(String[] args) {
         Prueba evaluar = new Prueba();
-       //evaluar.editarProd();
+       evaluar.editarProd();
        evaluar.guardarProducto();
         evaluar.listarProducto();
-        //evaluar.eliminarCategoria();
-       // evaluar.listarProducto();
+        evaluar.eliminarCategoria();
+       evaluar.listarProducto();
         
     }
     
@@ -66,8 +66,8 @@ public class Prueba {
        
     }
     public void eliminarCategoria(){
-        CategoriaDAO categoria = new CategoriaDAOImplementar();
-        categoria.borrarCat(8);
+        ProductoDAO categoria = new ProductoDAOImplementar();
+        categoria.borrarProd(5);
     }
 }
     

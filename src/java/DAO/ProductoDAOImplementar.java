@@ -90,12 +90,12 @@ public class ProductoDAOImplementar implements ProductoDAO{
                 
                 StringBuilder miSQL = new StringBuilder();
                 miSQL.append("INSERT INTO tb_producto(nom_producto, stock, precio, unidad_de_medida, estado_producto, categoria) VALUES('");
-                miSQL.append(producto.getNom_producto() + "', '").append(producto.getStock() + "', '").append(producto.getPrecio()+ "', '").append(producto.getUnidad_de_medida() + "', '").append(producto.getEstado_producto() + "', ").append(producto.getCategoria());
+                miSQL.append(producto.getNom_producto() + "', '").append(producto.getStock() + "', '").append(producto.getPrecio() + "', '").append(producto.getUnidad_de_medida() + "', '").append(producto.getEstado_producto() + "', ").append(producto.getCategoria());
                 miSQL.append(");");
                 this.conn.ejecutarSQL(miSQL.toString());
             }else if(producto.getId_producto() > 0){
                 
-             /*  System.out.println("Update");
+              System.out.println("Update");
                 StringBuilder miSQL = new StringBuilder();
                 miSQL.append("UPDATE tb_producto SET id_producto = ").append(producto.getId_producto());
                 miSQL.append(", nom_producto = '").append(producto.getNom_producto());
@@ -105,7 +105,7 @@ public class ProductoDAOImplementar implements ProductoDAO{
                 miSQL.append("', estado_producto = '").append(producto.getEstado_producto());
                  miSQL.append("', categoria = ").append(producto.getCategoria()); 
                 miSQL.append(" WHERE id_producto = ").append(producto.getId_producto()).append(";");
-                this.conn.ejecutarSQL(miSQL.toString());*/
+                this.conn.ejecutarSQL(miSQL.toString());
             }
            guarda = true;
         }catch(Exception e){
@@ -120,7 +120,20 @@ public class ProductoDAOImplementar implements ProductoDAO{
 
     @Override
     public boolean borrarProd(int id_prod_borrar) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+           this.conn = FactoryConexionBD.open(FactoryConexionBD.MySQL);
+        boolean borra = false;
+        try{
+            StringBuilder miSQL = new StringBuilder();
+            miSQL.append("Delete from tb_producto where id_producto = ").append(id_prod_borrar);
+            this.conn.ejecutarSQL(miSQL.toString());
+            borra = true;
+        }catch(Exception e){
+            
+        }finally{
+            this.conn.cerrarConexion();
+        }
+        
+        return borra;
     }
 
 }

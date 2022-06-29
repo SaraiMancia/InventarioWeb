@@ -44,6 +44,7 @@ public class ProductosS extends HttpServlet {
          String precio = request.getParameter("precio");
          String unidadMedida = request.getParameter("unidaddemedida");
          String estado_p = request.getParameter("estadoproducto");
+         String cate = request.getParameter("categoria");
     
 
     
@@ -51,13 +52,11 @@ public class ProductosS extends HttpServlet {
              this.listaProducto(request, response);
          }else if(estado.equals("editar")){
              System.out.println("Editando productos....");
-             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto+
-                     "&&stock="+stock+"&&precio="+precio+"&&unidaddemedida"+unidadMedida+"&&estadoproducto"+estado_p);
+             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto+"&&stock="+stock+"&&precio="+precio+"&&unidaddemedida"+unidadMedida+"&&estadoproducto"+estado_p+"&&categoria="+cate);
              dispatcher.forward(request, response);
          }else if(estado.equals("eliminar")){
              System.out.println("Baja de productos...");
-             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/eliminarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto+
-                     "&&stock="+stock+"&&precio="+precio+"&&unidaddemedida"+unidadMedida+"&&estadoproducto"+estado_p);
+             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/eliminarProductos.jsp?id="+id_producto+"&&nombre="+nom_producto+"&&stock="+stock+"&&precio="+precio+"&&unidaddemedida"+unidadMedida+"&&estadoproducto"+estado_p);
              dispatcher.forward(request, response);
          }else if(estado.equals("crear")){
              System.out.println("Crear productos...");
@@ -76,12 +75,13 @@ public class ProductosS extends HttpServlet {
             throws ServletException, IOException {
        Producto producto = new Producto();
        
-        producto.setId_producto(Integer.parseInt(request.getParameter("id_producto")));
+       // producto.setId_producto(Integer.parseInt(request.getParameter("id_producto")));
         producto.setNom_producto(request.getParameter("txtNom_Producto"));
         producto.setStock(Integer.parseInt(request.getParameter("txtStock")));
         producto.setPrecio(Float.parseFloat(request.getParameter("txtPrecio")));
         producto.setUnidad_de_medida(request.getParameter("txtunidadMedida"));
         producto.setEstado_producto(Integer.parseInt(request.getParameter("txtEstado")));
+        producto.setCategoria(Integer.parseInt(request.getParameter("txt_Categoria")));
         
 
         ProductoDAO guardarProducto = new ProductoDAOImplementar();

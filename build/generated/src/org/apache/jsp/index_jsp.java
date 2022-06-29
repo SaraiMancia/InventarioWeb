@@ -72,7 +72,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<script src=\"bootstrap/js/jquery-3.2.1.min.js\" type=\"text/javascript\"></script>\r\n");
       out.write("\r\n");
       out.write("    </head>\r\n");
-      out.write("    <body background=\"assets/imgs/Fondo.jpg\">\r\n");
+      out.write("    <body background=\"assets/imgs/page.png\">\r\n");
       out.write("        ");
       out.write("\r\n");
       out.write("\r\n");
