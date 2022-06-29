@@ -72,6 +72,7 @@ public final class listarCategorias_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("    <head>\r\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("        <title>Control de inventario</title>\r\n");
+      out.write("        \r\n");
       out.write("        ");
       out.write("\r\n");
       out.write("\r\n");
@@ -91,7 +92,7 @@ public final class listarCategorias_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\r\n");
       out.write("    </head>\r\n");
       out.write("    <center>\r\n");
-      out.write("    <body>\r\n");
+      out.write("    <body background=\"assets/imgs/Fondo.jpg\">\r\n");
       out.write("        ");
       out.write("\r\n");
       out.write("\r\n");
@@ -105,11 +106,14 @@ public final class listarCategorias_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("    <div class=\"contenido\">\r\n");
       out.write("\r\n");
       out.write("        \r\n");
-      out.write("        <div style=\"width: 600px;\">\r\n");
-      out.write("            <a href=\"");
+      out.write("        \r\n");
+      out.write("            \r\n");
+      out.write("            <center> <h3>Listado de Categorias Registradas</h3> </center>\r\n");
+      out.write("            <center>  <img class=\"mb-4\" src=\"assets/imgs/listita.jpg\" alt=\"\" width=\"185\" height=\"200\"></center><br>\r\n");
+      out.write("            <div style=\"width: 600px;\">\r\n");
+      out.write("                <a href=\"");
       out.print( request.getContextPath() );
-      out.write("/categoriasS.do?opcion=crear\" class=\"btn btn-success btn-sm glyphicon glyphicom-pencil\" role=\"button\"> Nueva Categoria</a>\r\n");
-      out.write("            <h3>Listado de Categorias Registradas</h3>\r\n");
+      out.write("/categoriasS.do?opcion=crear\" class=\"btn btn-success btn-sm glyphicon glyphicom-pencil\" role=\"button\"> Nueva Categoria</a><br><br>\r\n");
       out.write("            <table class=\"table table-striped\">\r\n");
       out.write("                <tr>\r\n");
       out.write("                    <th>ID</th><th>NOMBRE</th><th>ESTADO</th><th>ACCION</th>\r\n");
@@ -158,7 +162,7 @@ public final class listarCategorias_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\r\n");
       out.write("</div>\r\n");
       out.write("<div class=\"pie\">\r\n");
-      out.write("    &COPY;  Alexa A\r\n");
+      out.write("    &COPY;  Alexa A - Michell M - Melani M - Yuleidy D    \r\n");
       out.write("</div>\r\n");
       out.write("\r\n");
       out.write("    </body>\r\n");

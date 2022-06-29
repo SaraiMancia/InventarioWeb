@@ -11,7 +11,7 @@
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
     <center>
-    <body>
+    <body background="assets/imgs/color.jpg">
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         
         
