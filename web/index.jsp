@@ -8,7 +8,7 @@
     </head>
     <body background="assets/imgs/Fondo.jpg">
         <%@include file = "WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-    <center> <h1><strong>Resgistrar productos</strong></h1>
+    <center> <h1><em><strong>Resgistrar productos</strong></em></h1>
         <img class="mb-4" src="assets/imgs/Productos.png" alt="" width="150" height="200"></center>
 
         
