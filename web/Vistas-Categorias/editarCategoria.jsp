@@ -14,7 +14,7 @@
         <title>JSP Page</title>
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
-    <body class="m-0 row justify-content-center">
+    <body background="assets/imgs/fondo4.jpg" class="m-0 row justify-content-center">
          <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
              <center>
 
