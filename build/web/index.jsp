@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Control de inventario</title>
+        <title><strong>Control de inventario</strong></title>
         <%@include file = "WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
     <body>
