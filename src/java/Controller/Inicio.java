@@ -1,3 +1,4 @@
+
 package Controller;
 
 import DAO.UsuarioDAO;
@@ -14,69 +15,55 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-public class Login extends HttpServlet {
+public class Inicio extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Login</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Login at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        response.setContentType("text/html;charset=UTF-8");
+        
     }
 
- 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
-        dispatcher.forward(request, response);
-        //response.sendRedirect("/index.jsp");
+        processRequest(request, response);
     }
 
-    
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-        String dato_user_form = request.getParameter("txtCorreoU");
-        String dato_pass_form = request.getParameter("txtContra");
-        UsuarioDAO usuario = new UsuarioDAOImplementar();
+        processRequest(request, response);
+        UsuarioDAO usu = new UsuarioDAOImplementar();
+        UsuarioM usuario = new UsuarioM();
+        //Creación de arraylist para cargar datos del método que consulta a la base de datos.
         ArrayList<UsuarioM> users = new ArrayList();
-        HttpSession var_Session= request.getSession(true);
-        users = usuario.startSesion(dato_user_form, dato_pass_form);
+        HttpSession var_Session = request.getSession(true);
+        usuario.setCorreo(request.getParameter("txtCorreoU"));
+        usuario.setClave(request.getParameter("txtContra"));
+        
+        users = usu.startSesion(usuario.getCorreo(), usuario.getClave());
+        
+        
         if(users.size()>0){
             
             String name_full = users.get(0).getNombre() + " " + users.get(0).getApellido();
-            
             int tipo_user = users.get(0).getTipo();
             String name_user = users.get(0).getUsuario();
             String email_user = users.get(0).getCorreo();
             
+           
             var_Session.setAttribute("sessionNombres", name_full);
             var_Session.setAttribute("sessionTipo", String.valueOf(tipo_user));
             var_Session.setAttribute("sessionUsuario", name_user);
             var_Session.setAttribute("sessionEmail", email_user);
             
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Principal.jsp");
+            //Seteo en la variable de sesión lista, el contenido del arrayList. Los datos contenidos
+            //en el arrayList los obtengo de la consulta realizada a la base de datos.
+            var_Session.setAttribute("lista", users); //lista es el nombre de la variable de sesión.
+           
+            //request.getRequestDispatcher("mostrarusuario.jsp").forward(request, response);
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/principal.jsp");
             dispatcher.forward(request, response);
             //response.sendRedirect("principal.jsp");
         }else{
@@ -86,7 +73,7 @@ public class Login extends HttpServlet {
             //Apunto al servlet que le llame Login pero lo llamo por el parametro url-pattern.
             //Eso se puede verificar en: WEB-INF/web.xml.
             String url = "sesion";   
-                        out.println("<script>valor=confirm(\"Error. Usuario o Clave Incorrecto. " +"\\nNombre de Usuario: "  + dato_user_form + " \\n\\nClic en aceptar para volver a intentarlo. \");valor;"
+                        out.println("<script>valor=confirm(\"Error. Usuario o Clave Incorrecto. " +"\\nNombre de Usuario: "  + usuario + " \\n\\nClic en aceptar para volver a intentarlo. \");valor;"
                         + "if (valor==true){"
                         + "location.href='"+ url + "';"
                         + "}else{"
@@ -95,13 +82,19 @@ public class Login extends HttpServlet {
                         + "</script>");
                 }
             }
+         
+        
+        
+        
+        
+        
         
     }
 
-   
+    
     @Override
     public String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
-}
+    }
 
+}

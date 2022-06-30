@@ -1,12 +1,12 @@
-package DAO;
 
-import Model.Usuario;
+package DAO;
+import Controller.Usuario;
+import Model.UsuarioM;
 import java.util.ArrayList;
 
 public interface UsuarioDAO {
-    
-    //Definir los métodos, como la clase en interface. Los métodos no se implementan 
-    //aqui, los métodos son de tipo abstractos.
-    public ArrayList<Usuario> startSesion(String user, String clave);
-   
+    public ArrayList<UsuarioM> startSesion(String usuario, String clave);
+     public boolean guardarUsu(UsuarioM usuario);
+
+    public void guardarUsu(Usuario usuario);
 }

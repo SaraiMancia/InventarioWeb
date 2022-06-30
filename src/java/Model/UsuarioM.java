@@ -1,6 +1,13 @@
 package Model;
 
-public class Usuario {
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
+public class UsuarioM {
+
     int id;
     String nombre;
     String apellido;
@@ -13,25 +20,11 @@ public class Usuario {
     String respuesta;
     String fecha;
 
-    public Usuario() {
+    public UsuarioM(int id) {
+        this.id = 0;
     }
 
-    public Usuario(int id, String nombre, String apellido, String correo, String usuario, String clave, int tipo, int estado, String pregunta, String respuesta, String fecha) {
-        this.id = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.correo = correo;
-        this.usuario = usuario;
-        this.clave = clave;
-        this.tipo = tipo;
-        this.estado = estado;
-        this.pregunta = pregunta;
-        this.respuesta = respuesta;
-        this.fecha = fecha;
-    }
-
-    
-    
+   
 
     public int getId() {
         return id;
@@ -121,7 +114,28 @@ public class Usuario {
         this.fecha = fecha;
     }
     
-    
-    
+    Connection cnn;
+    Statement state;
+    ResultSet result;
+
+    public UsuarioM() {
+
+        
+
+    }
+    public UsuarioM(int id, String nombre, String apellido, String correo, String usuario, String clave, int tipo, int estado, String pregunta, String respuesta, String fecha) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.usuario = usuario;
+        this.clave = clave;
+        this.tipo = tipo;
+        this.estado = estado;
+        this.pregunta = pregunta;
+        this.respuesta = respuesta;
+        this.fecha = fecha;
+    }
     
 }
+
