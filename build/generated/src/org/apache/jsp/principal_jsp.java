@@ -61,6 +61,8 @@ public final class principal_jsp extends org.apache.jasper.runtime.HttpJspBase
         if(user == null){
             out.print("<center><h2><font color='blue'>Debe de haber iniciado Sesion para poder ingresar a esta pagina.</font><br><hr><font color='blue'>Intentelo de Nuevo</font><hr><h2></center><br>");
             out.print("<center><h2><font color='blue'> Por Favor Epere...</font><hr><h2></center>");
+            //out.print("<meta http-equiv='refresh' content='4; url=http:sesion'/ >");
+            //out.print("<meta http-equiv='refresh' content='4; url=http:./'/ >");
             response.sendRedirect("./");
         }else if(user!=null){
 
@@ -105,22 +107,19 @@ public final class principal_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <h3 style=\"text-align: center; width: 100%;\">BIENVENID@S: ");
       out.print( nombres );
       out.write("</h3>\r\n");
-      out.write("        \r\n");
-      out.write("        <img class=\"mb-4\" src=\"assets/imgs/imgPrincipal.jpg\" alt=\"\" width=\"150\" height=\"200\"></center>\r\n");
-      out.write("    \r\n");
       out.write("        ");
       out.write("\r\n");
       out.write("\r\n");
       out.write("</div>\r\n");
       out.write("<div class=\"pie\">\r\n");
-      out.write("    &COPY;  Alexa A\r\n");
+      out.write("    &COPY;  Alexa A - Michell M - Melani M - Yuleidy D    \r\n");
       out.write("</div>\r\n");
       out.write("\r\n");
       out.write("    </body>\r\n");
       out.write("</html>\r\n");
 
             }
-              System.out.println("Error. No se pudo iniciar sesion.");
+               //Aca puede ir un mensaje para informar que no se ha iniciado sesión.
             }catch(Exception e){
 
             }

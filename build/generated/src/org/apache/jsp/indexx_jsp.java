@@ -11,15 +11,23 @@ public final class indexx_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
-  static {
-    _jspx_dependants = new java.util.ArrayList<String>(1);
-    _jspx_dependants.add("/WEB-INF/Vistas-Parciales/css-js.jspf");
-  }
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_set_var_value_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_c_set_var_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_c_set_var_value_nobody.release();
+    _jspx_tagPool_c_if_test.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -35,7 +43,7 @@ public final class indexx_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html");
+      response.setContentType("text/html; charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -46,123 +54,51 @@ public final class indexx_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("<!doctype html>\r\n");
-      out.write("<html lang=\"en\">\r\n");
-      out.write("  <head>\r\n");
-      out.write("    <meta charset=\"utf-8\">\r\n");
-      out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n");
-      out.write("    <meta name=\"description\" content=\"\">\r\n");
-      out.write("    <meta name=\"author\" content=\"Mark Otto, Jacob Thornton, and Bootstrap contributors\">\r\n");
-      out.write("    <meta name=\"generator\" content=\"Hugo 0.98.0\">\r\n");
-      out.write("    <title>Signin Template Â· Bootstrap v5.2</title>\r\n");
-      out.write("     ");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("<link href=\"bootstrap-3.3.7-dist/css/estilo-base.css\" type=\"text/css\" rel=\"stylesheet\">\r\n");
-      out.write("\r\n");
-      out.write("<link href=\"bootstrap-3.3.7-dist/css/bootstrap-theme.css\" type=\"text/css\" rel=\"stylesheet\" />\r\n");
-      out.write("<link href=\"bootstrap-3.3.7-dist/css/bootstrap-theme.min.css\" type=\"text/css\" rel=\"stylesheet\" />\r\n");
-      out.write("<link href=\"bootstrap-3.3.7-dist/css/bootstrap.css\" type=\"text/css\" rel=\"stylesheet\" />\r\n");
-      out.write("<link href=\"bootstrap-3.3.7-dist/css/bootstrap.min.css\" type=\"text/css\" rel=\"stylesheet\" />\r\n");
-      out.write("\r\n");
-      out.write("<script src=\"bootstrap/js/bootstrap.js\" type=\"text/javascript\"></script>\r\n");
-      out.write("<script src=\"bootstrap/js/bootstrap.min.js\" type=\"text/javascript\"></script>\r\n");
-      out.write("\r\n");
-      out.write("<script src=\"bootstrap/js/jquery-3.2.1.js\" type=\"text/javascript\"></script>\r\n");
-      out.write("<script src=\"bootstrap/js/jquery-3.2.1.min.js\" type=\"text/javascript\"></script>\r\n");
-      out.write("\r\n");
-      out.write("    <!--<link rel=\"canonical\" href=\"https://getbootstrap.com/docs/5.2/examples/sign-in/\">\r\n");
-      out.write("   <link href=\"../assets/dist/css/bootstrap.min.css\" rel=\"stylesheet\">-->\r\n");
-      out.write("\r\n");
-      out.write("    <style>\r\n");
-      out.write("      .bd-placeholder-img {\r\n");
-      out.write("        font-size: 1.125rem;\r\n");
-      out.write("        text-anchor: middle;\r\n");
-      out.write("        -webkit-user-select: none;\r\n");
-      out.write("        -moz-user-select: none;\r\n");
-      out.write("        user-select: none;\r\n");
-      out.write("      }\r\n");
-      out.write("\r\n");
-      out.write("      @media (min-width: 768px) {\r\n");
-      out.write("        .bd-placeholder-img-lg {\r\n");
-      out.write("          font-size: 3.5rem;\r\n");
-      out.write("        }\r\n");
-      out.write("      }\r\n");
-      out.write("\r\n");
-      out.write("      .b-example-divider {\r\n");
-      out.write("        height: 3rem;\r\n");
-      out.write("        background-color: rgba(0, 0, 0, .1);\r\n");
-      out.write("        border: solid rgba(0, 0, 0, .15);\r\n");
-      out.write("        border-width: 1px 0;\r\n");
-      out.write("        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);\r\n");
-      out.write("      }\r\n");
-      out.write("\r\n");
-      out.write("      .b-example-vr {\r\n");
-      out.write("        flex-shrink: 0;\r\n");
-      out.write("        width: 1.5rem;\r\n");
-      out.write("        height: 100vh;\r\n");
-      out.write("      }\r\n");
-      out.write("\r\n");
-      out.write("      .bi {\r\n");
-      out.write("        vertical-align: -.125em;\r\n");
-      out.write("        fill: currentColor;\r\n");
-      out.write("      }\r\n");
-      out.write("\r\n");
-      out.write("      .nav-scroller {\r\n");
-      out.write("        position: relative;\r\n");
-      out.write("        z-index: 2;\r\n");
-      out.write("        height: 2.75rem;\r\n");
-      out.write("        overflow-y: hidden;\r\n");
-      out.write("      }\r\n");
-      out.write("\r\n");
-      out.write("      .nav-scroller .nav {\r\n");
-      out.write("        display: flex;\r\n");
-      out.write("        flex-wrap: nowrap;\r\n");
-      out.write("        padding-bottom: 1rem;\r\n");
-      out.write("        margin-top: -1px;\r\n");
-      out.write("        overflow-x: auto;\r\n");
-      out.write("        text-align: center;\r\n");
-      out.write("        white-space: nowrap;\r\n");
-      out.write("        -webkit-overflow-scrolling: touch;\r\n");
-      out.write("      }\r\n");
-      out.write("    </style>\r\n");
-      out.write("\r\n");
-      out.write("    \r\n");
-      out.write("    <!-- Custom styles for this template -->\r\n");
-      out.write("    <link href=\"css/signin.css\" rel=\"stylesheet\">\r\n");
-      out.write("  </head>\r\n");
-      out.write("  <body class=\"text-center\">\r\n");
-      out.write(" \r\n");
-      out.write("    \r\n");
-      out.write("<main class=\"form-signin w-100 m-auto\">\r\n");
-      out.write("  <form>\r\n");
-      out.write("    <img class=\"mb-4\" src=\"assets/img/login.png\" alt=\"\" width=\"72\" height=\"57\">\r\n");
-      out.write("    <h1 class=\"h3 mb-3 fw-normal\">Inicio</h1>\r\n");
-      out.write("\r\n");
-      out.write("    <div class=\"form-floating\">\r\n");
-      out.write("      <input type=\"email\" class=\"form-control\" id=\"floatingInput\" placeholder=\"name@example.com\">\r\n");
-      out.write("      <label for=\"floatingInput\">Tu correo</label>\r\n");
-      out.write("    </div>\r\n");
-      out.write("    <div class=\"form-floating\">\r\n");
-      out.write("      <input type=\"password\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Password\">\r\n");
-      out.write("      <label for=\"floatingPassword\">Tu clave</label>\r\n");
-      out.write("    </div>\r\n");
-      out.write("\r\n");
-      out.write("    <!--<div class=\"checkbox mb-3\">\r\n");
-      out.write("      <label>\r\n");
-      out.write("        <input type=\"checkbox\" value=\"remember-me\"> Remember me\r\n");
-      out.write("      </label>\r\n");
-      out.write("    </div>-->\r\n");
-      out.write("    <button class=\"w-100 btn btn-lg btn-primary\" type=\"submit\">Entrar</button>\r\n");
-      out.write("    <p class=\"mt-5 mb-3 text-muted\">&copy; 2022</p>\r\n");
-      out.write("  </form>\r\n");
-      out.write("</main>\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("    \r\n");
-      out.write("  </body>\r\n");
-      out.write("</html>\r\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("<head>\n");
+      out.write("<meta charset=\"UTF-8\">\n");
+      out.write("<title>Inicio de Sesión</title>\n");
+      out.write("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\">\n");
+      out.write("<link rel=\"stylesheet\" href=\"css/bootstrapValidator.css\">\n");
+      out.write("<link rel=\"stylesheet\" href=\"css/style.css\" />\n");
+      out.write("</head>\n");
+      out.write("<body>\n");
+      out.write("\t<div class=\"container\">\n");
+      out.write("\t\t<div class=\"form-container\">\n");
+      out.write("\t\t\t<h2>Inicio de sesión</h2>\n");
+      out.write("\t\t\t<form id=\"formLogin\" action=\"usuario\" method=\"post\">\n");
+      out.write("\t\t\t\t<input type=\"hidden\" name=\"tipo\" value=\"iniciarSesion\" />\n");
+      out.write("\t\t\t\t<div class=\"form-group\">\n");
+      out.write("\t\t\t\t\t<label for=\"nombre\">Usuario</label>\n");
+      out.write("\t\t\t\t\t<input type=\"text\" class=\"form-control\" name=\"nombre\" placeholder=\"Nombre de usuario\" />\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\n");
+      out.write("\t\t\t\t<div class=\"form-group\">\n");
+      out.write("\t\t\t\t\t<label for=\"clave\">Clave</label>\n");
+      out.write("\t\t\t\t\t<input type=\"password\" class=\"form-control\" name=\"clave\" placeholder=\"Contraseña\" />\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\n");
+      out.write("\t\t\t\t<button type=\"submit\" class=\"btn btn-success btn-block btn-lg\">Iniciar sesión</button>\n");
+      out.write("\t\t\t\t");
+      if (_jspx_meth_c_set_0(_jspx_page_context))
+        return;
+      out.write("\n");
+      out.write("\t\t\t\t");
+      if (_jspx_meth_c_if_0(_jspx_page_context))
+        return;
+      out.write("\n");
+      out.write("\t\t\t</form>\n");
+      out.write("\t\t</div>\n");
+      out.write("\t</div>\n");
+      out.write("\t<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>\n");
+      out.write("  \t<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js\"></script>\n");
+      out.write("  \t<script src=\"js/bootstrapValidator.js\"></script>\n");
+      out.write("\t<script src=\"js/script.js\"></script>\n");
+      out.write("</body>\n");
+      out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -174,5 +110,57 @@ public final class indexx_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_set_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:set
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_set_0 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _jspx_tagPool_c_set_var_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    _jspx_th_c_set_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_set_0.setParent(null);
+    _jspx_th_c_set_0.setVar("mensaje");
+    _jspx_th_c_set_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${requestScope.mensaje}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_c_set_0 = _jspx_th_c_set_0.doStartTag();
+    if (_jspx_th_c_set_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_0);
+      return true;
+    }
+    _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_if_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_0.setParent(null);
+    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty mensaje}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
+    if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("\t\t\t\t\t<div id=\"alertLogin\" class=\"alert alert-danger alert-dismissible fade in\">\n");
+        out.write("\t\t\t\t\t\t");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${mensaje}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("\n");
+        out.write("\t\t\t\t\t\t<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>\n");
+        out.write("\t\t\t\t\t</div>\n");
+        out.write("\t\t\t\t");
+        int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
+    return false;
   }
 }

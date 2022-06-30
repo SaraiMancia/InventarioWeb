@@ -1,5 +1,6 @@
 package DAO;
 
+import DAO.UsuarioDAO;
 import Factory.ConexionBD;
 import Factory.FactoryConexionBD;
 import Model.Categoria;
@@ -78,7 +79,7 @@ public class UsuarioDaoImplementar implements UsuarioDAO{
         UsuarioDAO p = new UsuarioDaoImplementar();
         //p.sesion("chovi", "123");
         ArrayList<Usuario> user = new ArrayList();
-        user = p.startSesion("melani.beltran20@itca.edu.sv", "12345");
+        user = p.startSesion("melani.beltran20@itca.edu", "12345");
         //Para obtener el tamaño de un arraylist. El tamaño esta dado en base
         //a la cantidad de filas o registros existentes en la BD.
         int size = user.size();
@@ -89,11 +90,6 @@ public class UsuarioDaoImplementar implements UsuarioDAO{
               System.out.println("El valor máximo de i es: " + i);
             } 
       }
-
-    @Override
-    public Usuario editarCat(int id_cat_edit) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     
 }
