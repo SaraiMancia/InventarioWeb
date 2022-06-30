@@ -15,7 +15,7 @@
         </script>
     </head>
     <center>
-    <body>
+    <body background="assets/imgs/fondo3.jpg">
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         
      
