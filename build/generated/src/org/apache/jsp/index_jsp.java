@@ -75,6 +75,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<script src=\"bootstrap/js/jquery-3.2.1.js\" type=\"text/javascript\"></script>\r\n");
       out.write("<script src=\"bootstrap/js/jquery-3.2.1.min.js\" type=\"text/javascript\"></script>\r\n");
       out.write("\r\n");
+<<<<<<< Updated upstream
       out.write("    <style>\r\n");
       out.write("      .bd-placeholder-img {\r\n");
       out.write("        font-size: 1.125rem;\r\n");
@@ -84,6 +85,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        -ms-user-select: none;\r\n");
       out.write("        user-select: none;\r\n");
       out.write("      }\r\n");
+=======
+      out.write("    </head>\r\n");
+      out.write("    <body background=\"assets/imgs/page.png\">\r\n");
+      out.write("        ");
+>>>>>>> Stashed changes
       out.write("\r\n");
       out.write("      @media (min-width: 768px) {\r\n");
       out.write("        .bd-placeholder-img-lg {\r\n");
