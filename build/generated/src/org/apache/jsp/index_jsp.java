@@ -48,12 +48,14 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\r\n");
-      out.write("<!DOCTYPE html>\r\n");
-      out.write("<html>\r\n");
-      out.write("    <head>\r\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("        <title>Control de inventario</title>\r\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("    <head>\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+      out.write("        <title><strong>Control de inventario</strong></title>\n");
       out.write("        ");
       out.write("\r\n");
       out.write("\r\n");
@@ -70,38 +72,27 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("<script src=\"bootstrap/js/jquery-3.2.1.js\" type=\"text/javascript\"></script>\r\n");
       out.write("<script src=\"bootstrap/js/jquery-3.2.1.min.js\" type=\"text/javascript\"></script>\r\n");
-      out.write("\r\n");
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      out.write("    <style>\r\n");
-      out.write("      .bd-placeholder-img {\r\n");
-      out.write("        font-size: 1.125rem;\r\n");
-      out.write("        text-anchor: middle;\r\n");
-      out.write("        -webkit-user-select: none;\r\n");
-      out.write("        -moz-user-select: none;\r\n");
-      out.write("        -ms-user-select: none;\r\n");
-      out.write("        user-select: none;\r\n");
-      out.write("      }\r\n");
-=======
-      out.write("    </head>\r\n");
-      out.write("    <body background=\"assets/imgs/page.png\">\r\n");
+      out.write("\n");
+      out.write("    </head>\n");
+      out.write("    <body>\n");
       out.write("        ");
->>>>>>> Stashed changes
-=======
-      out.write("    </head>\r\n");
-      out.write("    <body>\r\n");
-      out.write("        ");
->>>>>>> Stashed changes
       out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
-      out.write("<html>\r\n");
-      out.write("    <head>\r\n");
-      out.write(" \r\n");
-      out.write("\r\n");
-      out.write("    <center> <h1>Resgistrar productos</h1>\r\n");
-      out.write("        <img class=\"mb-4\" src=\"assets/imgs/Productos.png\" alt=\"\" width=\"150\" height=\"200\"></center>\r\n");
-      out.write("\r\n");
+      out.write("<div>\r\n");
+      out.write("    <div class=\"encabezado\">\r\n");
+      out.write("        Sistema de contrl de inventario \r\n");
+      out.write("        <a href=\"index\" class=\"btn btn-primary btn-sm\" role=\"button\">Inicio</a>\r\n");
+      out.write("        <a href=\"categoriasS.do?opcion=listar\" class=\"btn btn-primary btn-sm\" role=\"button\">Categoria</a>\r\n");
+      out.write("        <a href=\"ProductosS.do?opcion=listar\" class=\"btn btn-primary btn-sm\" role=\"button\">Producto</a>\r\n");
       out.write("        \r\n");
+      out.write("    </div>\r\n");
+      out.write("    <div class=\"contenido\">\r\n");
+      out.write("\r\n");
+      out.write("\n");
+      out.write("    <center> <h1>Resgistrar productos</h1>\n");
+      out.write("        <img class=\"mb-4\" src=\"assets/imgs/Productos.png\" alt=\"\" width=\"150\" height=\"200\"></center>\n");
+      out.write("\n");
+      out.write("        \n");
       out.write("        ");
       out.write("\r\n");
       out.write("\r\n");
@@ -109,9 +100,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<div class=\"pie\">\r\n");
       out.write("    &COPY;  Alexa A - Michell M - Melani M - Yuleidy D    \r\n");
       out.write("</div>\r\n");
-      out.write("\r\n");
-      out.write("    </body>\r\n");
-      out.write("</html>");
+      out.write("\n");
+      out.write("    </body>\n");
+      out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
