@@ -12,8 +12,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List<String> _jspx_dependants;
 
   static {
-    _jspx_dependants = new java.util.ArrayList<String>(1);
+    _jspx_dependants = new java.util.ArrayList<String>(3);
     _jspx_dependants.add("/WEB-INF/Vistas-Parciales/css-js.jspf");
+    _jspx_dependants.add("/WEB-INF/Vistas-Parciales/encabezado.jspf");
+    _jspx_dependants.add("/WEB-INF/Vistas-Parciales/pie.jspf");
   }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -47,18 +49,12 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\r\n");
-      out.write("<!doctype html>\r\n");
-      out.write("<html lang=\"es\">\r\n");
-      out.write("  <head>\r\n");
-      out.write("    <meta charset=\"utf-8\">\r\n");
-      out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\r\n");
-      out.write("    <meta name=\"description\" content=\"\">\r\n");
-      out.write("    <title>Sign-in Inventario</title>\r\n");
-      out.write("    <!--<link rel=\"icon\" href=\"assets/img/favicon3.ico\" type=\"image/x-icon\">-->\r\n");
-      out.write("    <!-- Bootstrap core CSS -->\r\n");
-      out.write("    <!-- <link href=\"../assets/dist/css/bootstrap.css\" rel=\"stylesheet\">-->\r\n");
-      out.write("    <!--<link href=\"css/bootstrap.css\" type=\"text/css\" rel=\"stylesheet\">-->\r\n");
-      out.write("    ");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html>\r\n");
+      out.write("    <head>\r\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
+      out.write("        <title>Control de inventario</title>\r\n");
+      out.write("        ");
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -76,6 +72,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<script src=\"bootstrap/js/jquery-3.2.1.min.js\" type=\"text/javascript\"></script>\r\n");
       out.write("\r\n");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       out.write("    <style>\r\n");
       out.write("      .bd-placeholder-img {\r\n");
       out.write("        font-size: 1.125rem;\r\n");
@@ -90,37 +87,30 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <body background=\"assets/imgs/page.png\">\r\n");
       out.write("        ");
 >>>>>>> Stashed changes
+=======
+      out.write("    </head>\r\n");
+      out.write("    <body>\r\n");
+      out.write("        ");
+>>>>>>> Stashed changes
       out.write("\r\n");
-      out.write("      @media (min-width: 768px) {\r\n");
-      out.write("        .bd-placeholder-img-lg {\r\n");
-      out.write("          font-size: 3.5rem;\r\n");
-      out.write("        }\r\n");
-      out.write("      }\r\n");
-      out.write("    </style>\r\n");
-      out.write("    <!-- Custom styles for this template -->\r\n");
-      out.write("    <link href=\"css/signin.css\" type=\"text/css\" rel=\"stylesheet\">\r\n");
-      out.write("  </head>\r\n");
-      out.write("  <body class=\"text-center\">\r\n");
-      out.write("      <main class=\"form-signin w-100 m-auto\">\r\n");
-      out.write("      <form class=\"form-signin\" action=\"sesion\" method=\"POST\">\r\n");
-      out.write("      <img class=\"mb-4\" src=\"assets/img/login.png\" alt=\"\" width=\"72\" height=\"72\">\r\n");
-      out.write("      <h1 class=\"h3 mb-3 font-weight-normal\">Iniciar Sesión</h1>\r\n");
-      out.write("      <label for=\"inputEmail\" class=\"sr-only\">Email address</label>\r\n");
-      out.write("      <input type=\"email\" name=\"txtEmail\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email address\" required autofocus>\r\n");
-      out.write("      <label for=\"inputPassword\" class=\"sr-only\">Password</label>\r\n");
-      out.write("      <input type=\"password\" name=\"txtPassword\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Password\" required>\r\n");
-      out.write("      <div class=\"checkbox mb-3\">\r\n");
-      out.write("        <label>\r\n");
-      out.write("          <!--<input type=\"checkbox\" value=\"remember-me\"> Remember me -->\r\n");
-      out.write("          <a href=\"#\" title=\"¿No tienes cuenta?\">¿No tienes cuenta? | </a>\r\n");
-      out.write("          <a href=\"#\" title=\"Olvide mi contraseña\">Olvidé mi contraseña</a>\r\n");
-      out.write("        </label>\r\n");
-      out.write("      </div>\r\n");
-      out.write("      <button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">Ingresar</button>\r\n");
-      out.write("      <p class=\"mt-5 mb-3 text-muted\">MEGATEC-ZACATECOLUCA &copy; 2022</p>\r\n");
-      out.write("    </form>\r\n");
-      out.write("          </main>\r\n");
-      out.write("</body>\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html>\r\n");
+      out.write("    <head>\r\n");
+      out.write(" \r\n");
+      out.write("\r\n");
+      out.write("    <center> <h1>Resgistrar productos</h1>\r\n");
+      out.write("        <img class=\"mb-4\" src=\"assets/imgs/Productos.png\" alt=\"\" width=\"150\" height=\"200\"></center>\r\n");
+      out.write("\r\n");
+      out.write("        \r\n");
+      out.write("        ");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("</div>\r\n");
+      out.write("<div class=\"pie\">\r\n");
+      out.write("    &COPY;  Alexa A - Michell M - Melani M - Yuleidy D    \r\n");
+      out.write("</div>\r\n");
+      out.write("\r\n");
+      out.write("    </body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
