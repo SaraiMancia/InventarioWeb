@@ -15,7 +15,7 @@
         </script>
     </head>
     <center>
-    <body background="assets/imgs/fondo3.jpg">
+    <body>
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         
      
@@ -26,7 +26,7 @@
     <p> <center> Por favor introduce la información:</p> </center>
           <form class="form-horizantal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath()%>/categoriasS.do" method="post">    
            
-              <center>  <img class="mb-4" src="assets/imgs/carrito.jpg" alt="" width="150" height="200"></center>
+              <center>  <img class="mb-4" src="assets/imgs/imgPrincipal.png" alt="" width="150" height="200"></center>
                    <td align="right">   Id categoria: </td>              
                    <td>      <input type="hidden" name="id_categoria" value="<%= Categoria.getId_categoria() %>"></td> <br><br>          
                            
