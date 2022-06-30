@@ -23,7 +23,7 @@
   <div class="card-body">
   <h5 class="card-title"></h5>
     <p class="card-text"> 
-    <p> <center> Por favor introduce la información:</p> </center>
+    <p> <center> Por favor introdusca la información:</p> </center>
           <form class="form-horizantal" id="frmCategoria" name="frmCategoria" action="<%= request.getContextPath()%>/categoriasS.do" method="post">    
            
               <center>  <img class="mb-4" src="assets/imgs/imgPrincipal.png" alt="" width="150" height="200"></center>
