@@ -108,7 +108,7 @@ public class Usuario extends HttpServlet {
         UsuarioDAO guardarUsu = new  UsuarioDAOImplementar();
         guardarUsu.guardarUsu(usuario);
         
-        if(guardarUsu.dguardarUsu(usuario) = true){
+        if(guardarUsu.guardarUsu(usuario) = true){
             request.getRequestDispatcher("InicioSesion.jsp").forward(request, response);
         }else{
           request.getRequestDispatcher("RegistrarUsuario.jsp").forward(request, response);   
