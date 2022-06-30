@@ -89,23 +89,21 @@ public class ProductoDAOImplementar implements ProductoDAO{
                 System.out.println("Guardar");
                 
                 StringBuilder miSQL = new StringBuilder();
-                miSQL.append("INSERT INTO tb_producto(nom_producto, stock, precio, unidad_de_medida, estado_producto, categoria) VALUES('");
-                miSQL.append(producto.getNom_producto() + "', '").append(producto.getStock() + "', '").append(producto.getPrecio() + "', '").append(producto.getUnidad_de_medida() + "', '").append(producto.getEstado_producto() + "', ").append(producto.getCategoria());
-                miSQL.append(");");
-                this.conn.ejecutarSQL(miSQL.toString());
-            }else if(producto.getId_producto() > 0){
-                
-              System.out.println("Update");
-                StringBuilder miSQL = new StringBuilder();
-                miSQL.append("UPDATE tb_producto SET id_producto = ").append(producto.getId_producto());
-                miSQL.append(", nom_producto = '").append(producto.getNom_producto());
-                miSQL.append("', stock = '").append(producto.getStock());
-                miSQL.append("', precio = '").append(producto.getPrecio());
-                miSQL.append("', unidad_de_medida = '").append(producto.getUnidad_de_medida());
-                miSQL.append("', estado_producto = '").append(producto.getEstado_producto());
-                 miSQL.append("', categoria = ").append(producto.getCategoria()); 
-                miSQL.append(" WHERE id_producto = ").append(producto.getId_producto()).append(";");
-                this.conn.ejecutarSQL(miSQL.toString());
+                miSQL.append("INSERT INTO tb_producto(nom_producto, stock, precio, unidad_de_medida, estado_producto) VALUES('");
+            miSQL.append(producto.getNom_producto() + "', '").append(producto.getStock() + "', '").append(producto.getPrecio() + "', '").append(producto.getUnidad_de_medida() + "', '").append(producto.getEstado_producto()).append("\'");
+            miSQL.append(");");
+            this.conn.ejecutarSQL(miSQL.toString());
+        }else if(producto.getId_producto() > 0){
+             StringBuilder miSQL = new StringBuilder();
+             miSQL.append("UPDATE tb_producto SET id_producto = ").append(producto.getId_producto());
+             miSQL.append(",nom_producto = '").append(producto.getNom_producto());
+             miSQL.append("',stock = '").append(producto.getStock());
+             miSQL.append("',precio ='").append(producto.getPrecio());
+             miSQL.append("',unidad_de_medida = '").append(producto.getUnidad_de_medida());
+             miSQL.append("',estado_producto = '").append(producto.getEstado_producto());
+             
+             miSQL.append("WHERE id = ").append(producto.getId_producto()).append(";");
+             this.conn.ejecutarSQL(miSQL.toString());
             }
            guarda = true;
         }catch(Exception e){

@@ -1,7 +1,7 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page  contentType="text/html" pageEncoding="UTF-8" %>
 
-<jsp:useBean id="Producto" scope="session" class="Model.Producto"/>
+<jsp:useBean id="producto" scope="session" class="Model.Producto"/>
 <!DOCTYE html>
 <html>
     <head>
@@ -29,7 +29,7 @@
            
               
                    <td align="right">   Id productos: </td>              
-                   <td>      <input type="hidden" name="id_producto" value="<%= Producto.getId_producto() %>"></td> <br><br>          
+                   <td>      <input type="hidden" name="id_producto" value="<%= producto.getId_producto() %>"></td> <br><br>          
                            
                    <td align="right"> Nombre: </td>                  
                    <td>    <input type="text" class="form-control" name="txtNom_Producto" value=""></td>  <br><br>         
@@ -41,8 +41,8 @@
                    <td>    <input type="text" class="form-control" name="txtunidadMedida" value=""></td>  <br><br>
                    <td align="right"> Estado </td>                  
                    <td>    <input type="text" class="form-control" name="txtEstado" value=""></td>  <br><br>
-                   <td align="right"> Categoria: </td>                  
-                   <td>    <input type="text" class="form-control" name="txt_Categoria" value=""></td>  <br><br>
+                  <%--<td align="right"> Categoria: </td>                  
+                   <td>    <input type="text" class="form-control" name="txt_Categoria" value=""></td>  <br><br>--%>
          
                <input type="submit" class="btn btn-success btn-sm" name="btnGuardar" value="Guardar"/>
                 <input type="button" class="btn btn-danger btn-sm" onclick="regresar('<%= request.getContextPath() %>/ProductosS.do?opcion=listar')"
