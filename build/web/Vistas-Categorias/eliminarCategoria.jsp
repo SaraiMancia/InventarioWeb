@@ -20,7 +20,7 @@
         
             
             <h4>¿ Desea Eliminar el Registro?</h4><br>
-            <center>  <img class="mb-4" src="assets/imgs/interrogacion.jpg" alt="" width="150" height="200"></center>
+            <center>  <img class="mb-4" src="assets/imgs/basurero.jpg" alt="" width="150" height="200"></center>
             <h5>ID Categoria: <%= id_cat %></h5>
             <h5>Nombre Categoria: <%= nombre_cat %></h5>
         </div>
