@@ -17,7 +17,7 @@
         
             
     <center><strong><em> <big>Listado de Categorias Registradas</big></strong></em> </center>
-            <center>  <img class="mb-4" src="assets/imgs/super.jpg" alt="" width="450" height="225"></center><br>
+            <center>  <img class="mb-4" src="assets/imgs/listar.jpg" alt="" width="450" height="225"></center><br>
             <div style="width: 600px;">
                 <a href="<%= request.getContextPath() %>/categoriasS.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicom-pencil" role="button"> Nueva Categoria</a><br><br>
             <table class="table table-striped">

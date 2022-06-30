@@ -75,7 +75,7 @@ public class ProductosS extends HttpServlet {
             throws ServletException, IOException {
        Producto producto = new Producto();
        
-       // producto.setId_producto(Integer.parseInt(request.getParameter("id_producto")));
+        producto.setId_producto(Integer.parseInt(request.getParameter("id_producto")));
         producto.setNom_producto(request.getParameter("txtNom_Producto"));
         producto.setStock(Integer.parseInt(request.getParameter("txtStock")));
         producto.setPrecio(Float.parseFloat(request.getParameter("txtPrecio")));
