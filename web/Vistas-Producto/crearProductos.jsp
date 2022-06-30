@@ -15,7 +15,7 @@
         </script>
     </head>
     <center>
-    <body>
+    <body background="assets/imgs/fondo5.jpg">
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         
         <h3>Mantenimiento Productos</h3>
