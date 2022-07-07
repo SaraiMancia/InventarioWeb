@@ -20,6 +20,7 @@
        
         <div style="width: 600px;">
             <a href="<%= request.getContextPath()%>/categoriasS.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicom-pencil" role="button"> Nueva Categoria</a><br><br>
+            <a href="/Vistas-s-r/reportecstegoria.jsp" class="btn btn-success btn-sm glyphicon glyphicom-pencil"> Reporte de Categoria</a>
             <table class="table table-dark">
                 <tr>
                     <th>ID</th><th>NOMBRE</th><th>ESTADO</th><th>ACCION</th>

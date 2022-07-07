@@ -114,7 +114,6 @@ public class ProductoDAOImplementar implements ProductoDAO{
 
         return guarda;
     }
-
     @Override
     public boolean borrarProd(int id_prod_borrar) {
            this.conn = FactoryConexionBD.open(FactoryConexionBD.MySQL);
