@@ -15,6 +15,7 @@
             <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
             <div style="width: 800px;">
                 <a href="<%= request.getContextPath()%>/ProductosS.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicom-pencil" role="button"> Nuevo producto</a>
+                   <a href="<%= request.getContextPath()%>/Vistas-s-r/reporteproducto.jsp" class="btn btn-success btn-sm glyphicon glyphicom-pencil"> Reporte de Categoria</a>
                 <h3>Listado de Produtos Registrados</h3>
                 <table class="table table-dark">
                     <tr>
