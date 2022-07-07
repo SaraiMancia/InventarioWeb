@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bb502a1f-933b-481d-ac60-9e2fa3a87339">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM tb_categoria]]>
+	</queryString>
+	<field name="id_categoria" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nom_categoria" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado_categoria" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="4dccb378-954b-4451-99ed-6e33c89b7c8c"/>
+				<imageExpression><![CDATA["leaf_banner_violet.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="12" y="13" width="263" height="33" uuid="760943ae-a99e-429d-8e68-8b92e2fa963c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="18"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE CATEGORIAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="63" y="46" width="200" height="22" uuid="2e1d3677-4bd5-47a4-8dc8-6bcacb6ea552"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="3e003280-ce64-4f8a-8f1d-520533398f2f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="185" height="15" uuid="450a8fb9-b87c-44c2-9d29-4d8165197891"/>
+				<box>
+					<pen lineWidth="1.75" lineColor="#CC00FF"/>
+					<topPen lineWidth="1.75" lineColor="#CC00FF"/>
+					<leftPen lineWidth="1.75" lineColor="#CC00FF"/>
+					<bottomPen lineWidth="1.75" lineColor="#CC00FF"/>
+					<rightPen lineWidth="1.75" lineColor="#CC00FF"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Id de categoria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="185" y="19" width="185" height="15" uuid="d3c8093c-c46d-4a6a-b2bb-cf6b2d305256"/>
+				<box>
+					<pen lineWidth="1.75" lineColor="#CC00CC"/>
+					<topPen lineWidth="1.75" lineColor="#CC00CC"/>
+					<leftPen lineWidth="1.75" lineColor="#CC00CC"/>
+					<bottomPen lineWidth="1.75" lineColor="#CC00CC"/>
+					<rightPen lineWidth="1.75" lineColor="#CC00CC"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Nombre de categoria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="370" y="19" width="185" height="15" uuid="ff627539-7b57-4de7-adc5-53d25971d8b0"/>
+				<box>
+					<pen lineWidth="1.75" lineColor="#CC00CC"/>
+					<topPen lineWidth="1.75" lineColor="#CC00CC"/>
+					<leftPen lineWidth="1.75" lineColor="#CC00CC"/>
+					<bottomPen lineWidth="1.75" lineColor="#CC00CC"/>
+					<rightPen lineWidth="1.75" lineColor="#CC00CC"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Estado de categoria]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="36d62d42-c800-4964-a6e8-f127a7dd6f15"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="185" height="15" uuid="fe61b09a-3f18-47da-be9d-c5eb1a212fe5"/>
+				<textFieldExpression><![CDATA[$F{id_categoria}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="185" y="0" width="185" height="15" uuid="9f3e8386-b697-457b-92a8-1ccc3b181223"/>
+				<textFieldExpression><![CDATA[$F{nom_categoria}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="370" y="0" width="185" height="15" uuid="e6bb8960-b644-4559-80da-c820262fef75"/>
+				<textFieldExpression><![CDATA[$F{estado_categoria}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="86b8f75f-a1ae-4490-8f32-911abbd03a59"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="2a7fa8b0-d798-4b5f-8325-a51e99e66486"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="8ff5c53e-9fe8-401c-8b45-8317fbe44a21"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="3c5eac44-0a99-4593-a269-1dc928d7d97c"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
