@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 06-30-2022, 09:05:53 AM
-    Author     : sampc
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,10 +6,10 @@
         <title><strong>Control de inventario</strong></title>
         <%@include file = "WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
-    <body>
+    <body background="assets/imgs/2.jpg">
         <%@include file = "WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-    <center> <h1>Resgistrar productos</h1>
-        <img class="mb-4" src="assets/imgs/Productos.png" alt="" width="150" height="200"></center>
+    <center> <h1>Bienvenido/a:</h1>
+        <img class="mb-4" src="assets/imgs/to.png" alt="" width="200" height="200"></center><br><br>
 
         
         <%@include file = "WEB-INF/Vistas-Parciales/pie.jspf" %>
