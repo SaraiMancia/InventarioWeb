@@ -1,14 +1,17 @@
-
 package DAO;
 
 
+import java.util.ArrayList;
+import Model.usuarios;
 
-import Model.UsuarioM;
-import java.util.List;
-
-public interface RegistroDAO {
+public interface registroDAO {
     
-   
-    public boolean guardarUsu(UsuarioM usuario);
+    public ArrayList<usuarios> startSesion(String user, String clave);
+    public boolean RegistrarUsuario(usuarios usuario);
+    public String recuperarCorreo(long telefono);
+    public String recuperarContraseña (String correo);
+    public String pregunta(String correo);
+    public String respuesta(String correo, String pregunta);
+    public String verificarCorreo(String correo);
     
 }
