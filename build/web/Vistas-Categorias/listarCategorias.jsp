@@ -1,49 +1,50 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<%@page import = "Model.Categoria" %>
-
-<jsp:useBean id = "lista" scope="session" class="java.util.List" />
+<%
+    ////request.getContextPath()
+    String id_cat = request.getParameter("id");
+    String nombre_cat = request.getParameter("nombre");
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Control de inventario</title>
-        
+        <title>Baja Categorias</title>
+
+
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
     </head>
     <center>
-    <body background="assets/imgs/color.jpg">
-        <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
-        
-        
-            
-    <center><strong><em> <big>Listado de Categorias Registradas</big></strong></em> </center>
-            <center>  <img class="mb-4" src="assets/imgs/listar.jpg" alt="" width="450" height="225"></center><br>
-            <div style="width: 600px;">
-                <a href="<%= request.getContextPath() %>/categoriasS.do?opcion=crear" class="btn btn-success btn-sm glyphicon glyphicom-pencil" role="button"> Nueva Categoria</a><br><br>
-            <table class="table table-striped">
-                <tr>
-                    <th>ID</th><th>NOMBRE</th><th>ESTADO</th><th>ACCION</th>
-                </tr>
-                <%
-                    for(int i =0 ; i < lista.size(); i++){
-                        Categoria categoria = new Categoria();
-                        categoria = (Categoria)lista.get(i);
-                %>
-                <tr>
-                    <td><%= categoria.getId_categoria() %></td>
-                    <td><%= categoria.getNom_categoria() %></td>
-                    <td><%= categoria.getEstado_categoria() %></td>
-                    <td>
-                        <a href="categoriasS.do?opcion=editar&&id=<%= categoria.getId_categoria() %>&&nombre=<%= categoria.getNom_categoria() %>&&estado=<%= categoria.getEstado_categoria() %>" class="btn btn-info btn-sm glyphicon glyphicon-edit"  role="button"> Editar</a>
-                        <a href="categoriasS.do?opcion=eliminar&&id=<%= categoria.getId_categoria() %>&&nombre=<%= categoria.getNom_categoria() %>" class="btn btn-danger btn-sm glyphicon glyphicon-remove"  role="button"> Eliminar</a>
-                    </td>
-                </tr>
-                <%
-                    }
-                %>
-            </table>
-        </div>
-                <%@include file = "../WEB-INF/Vistas-Parciales/pie.jspf" %>
-    </body>
+        <body background="assets/imgs/2.jpg">
+            <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
+            <div class="col-auto bg-gray p-5 text-center">
+
+
+                <h4>¿ Desea Eliminar el Registro?</h4><br>
+                <center>  <img class="mb-4" src="assets/imgs/basurero.jpg" alt="" width="150" height="200"></center>
+                <h5>ID Categoria: <%= id_cat%></h5>
+                <h5>Nombre Categoria: <%= nombre_cat%></h5>
+            </div>
+
+            <!---->
+
+            <div class="d-grid gap-5 d-md-flex justify-content-md-center">
+                <a href="eliminarCategoria.do?respuesta=yes&&id=<%= id_cat%>" class="btn btn-primary btn-lg" role="button"> Aceptar</a>
+                <!--<a href="< //request.getContextPath() >" class="btn btn-secondary btn-lg" role="button">No / Cancelar</a>-->
+                <a href="categoriasS.do?opcion=listar" class="btn btn-primary btn-lg" role="button"> Cancelar</a>
+
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-4 bg-white">
+                    &nbsp;
+                </div>
+                <div class="col-4 bg-white">
+                    &nbsp;
+                </div>
+            </div>
+
+
+            <%@include file = "../WEB-INF/Vistas-Parciales/pie.jspf" %>
+        </body>
     </center>
 </html>
