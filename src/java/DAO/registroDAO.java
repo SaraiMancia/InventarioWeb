@@ -1,18 +1,11 @@
 
 package DAO;
 
-
-import java.util.ArrayList;
 import Model.usuarios;
+import java.util.ArrayList;
 
 public interface registroDAO {
-    
-    public ArrayList<usuarios> startSesion(String user, String clave);
-    public boolean RegistrarUsuario(usuarios usuario);
-    public String recuperarCorreo(long telefono);
-    public String recuperarContraseña (String correo);
-    public String pregunta(String correo);
-    public String respuesta(String correo, String pregunta);
-    public String verificarCorreo(String correo);
-    
+    //Definir los metodos, como la clase de interface. Los metodos no se implementan
+    //aqui, los metodos son de tipo abstracto
+    public ArrayList<usuarios> starSesion(String user, String clave);
 }

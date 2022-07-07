@@ -1,25 +1,32 @@
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package DAO;
-
-import Factory.ConexionBD;
-import Factory.Conexion;
-import Model.UsuarioM;
+import BD.Conexion;
+import Model.usuarios;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
-
+/**
+ *
+ * @author j0rg3
+ */
 public class LoginDAO {
-    int respt = 0;
-    String sql = "";
-    Conexion cn = new Conexion() ;
+    int rspta=0;
+    String sql="";
     ResultSet rs=null;
-    public int validarLogin(UsuarioM usu) throws SQLException{
-        
-        sql = "SELECT COUNT(id)AS cantidad FROM `tb_usuario` WHERE correo='" + usu.getCorreo() + "' AND clave='" + usu.getClave()+"'";
-        rs=cn.ejecutarConsultar(sql);
+    Conexion cn=new Conexion();
+
+    public int validarLogin(usuarios tm) throws Exception{
+        sql="SELECT COUNT(id) AS cantidad FROM `tb_usuario` WHERE usuario='"+tm.getUsuario()+"' AND clave='"+tm.getClave()+"'";
+        rs=cn.ejecutarConsulta(sql);
         while(rs.next()){
-            respt=rs.getInt("cantidad");
+            rspta=rs.getInt("cantidad");
         }
-        return respt;
+     return rspta;      
     }
+
+    
 }

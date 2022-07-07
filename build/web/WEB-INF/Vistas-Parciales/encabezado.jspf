@@ -12,8 +12,9 @@
                         <li><a id="len1" class="hoverable" href="Index">Inicio</a></li>
                         <li><a id="len2" class="hoverable" href="categoriasS.do?opcion=listar">Categoria</a></li>
                         <li><a id="len3" class="hoverable" href="ProductosS.do?opcion=listar">Producto</a></li>
-                         <li><a id="len4" class="hoverable" href="/Vista-consultas/consulta.jsp">Consultas</a></li>
-                        <li><a id="len5" class="hoverable" href="registroUser.do?opcion=registrar"> Registrarse </a></li>
+                         <li><a id="len4" class="hoverable" href="Vistas-Sesecion/reportescp.jsp">Reportes</a></li>
+                         <li><a id="len5" class="hoverable" href="registroUser.do?opcion=registrar"> Registrarse </a></li>
+                        <li>  <a href="Salir.do" id="len6" class="hoverable"><p> Salir</p></a> </li>
                     </ul>
                 </div>
             </nav>
