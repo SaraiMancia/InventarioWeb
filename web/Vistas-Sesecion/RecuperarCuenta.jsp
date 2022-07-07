@@ -20,7 +20,7 @@
             <form class="form-horizontal" action="loggin.go" method="post">
                 <img class="rounded mx-auto d-block" src="assets/img/IconoRecuperarCuenta.png" alt="" width="100" height="100">
                 <h1>Recuperación de cuenta</h1><br>
-        <p><b>Para recuperar la cuenta ingrese a continuación su numero de teléfono</b></p>
+        <p><b>Para recuperar la cuenta ingrese a continuación su numero telefonico:</b></p>
                 <input type="hidden" name="opcion" value="recuperarcuenta">
                 <input type="text" class="form-control" name="txtTelefonoUsuario"  id="telefono" placeholder="Ingrese el número de teléfono asociado a su cuenta" required>
                 <br>

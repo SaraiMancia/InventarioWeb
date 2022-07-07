@@ -19,7 +19,7 @@
         <form action="loggin.go" method="post">
             <img class="rounded mx-auto d-block" src="assets/img/IconoRecuperarConstraseña.png" alt="" width="100" height="100"><br>
             <h2>Recuperación de contraseña</h2><br>
-        <p><b>Para recuperar su contraseña, ingrese su correo electrónico a continuación: </b></p>
+        <p><b>Para recuperar su contraseña, ingrese su correo electrónico a continuacion: </b></p>
             <input type="hidden" name="opcion" value="recuperarcontrasena">
             <input type="text" class="form-control" name="txtCorreoUsuario"  id="correo" placeholder="Ingrese su correo electrónico" required><br>
                 
