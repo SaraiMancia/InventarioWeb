@@ -8,7 +8,7 @@
     String precio = request.getParameter("precio");
     String unidadMedida = request.getParameter("unidaddemedida");
     String estado_p = request.getParameter("estadoproducto");
-    String categoria = request.getParameter("Categoria");
+    String cat = request.getParameter("categoria");
 
 
 %>
@@ -17,15 +17,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <%@include file = "../WEB-INF/Vistas-Parciales/css-js.jspf" %>
+         <script type="text/javascript">
+            function regresar(url) {
+                location.href = url;
+            }
+        </script>
     </head>
-    <body background="assets/imgs/fondo6.jpg" class="m-0 row justify-content-center">
+    <body background="assets/imgs/2.jpg" class="m-0 row justify-content-center">
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         <div class="col-auto bg-gray p-5 text-center">
             <h1 class='text-center'>Información de Categoria</h1>
-            <form action="modificarProducto.do" method="post">
+            <form action="modificarProductos.do" method="post">
                 <div class="mb-3 row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">ID Categoria:</label>
-                    <div class="col-sm-10">
+                    <div class="col-sm-3">
                         <input type="text" value='<%= id_producto%>' name="id1" id="id1" readonly class="form-control-plaintext" id="staticEmail" placeholder="ID producto">
                         <input type="hidden" value='<%= id_producto%>' name="id" id="id" readonly class="form-control-plaintext" id="staticEmail" >
                     </div>
@@ -41,37 +46,37 @@
                 <div class="mb-3 row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Stock:</label>
                     <div class="col-sm-5">
-                        <input type="text" value='<%= stock%>' name="stk" id="stock" class="form-control" placeholder="stock" required="true">
+                        <input type="text" value='<%= stock%>' name="stock" id="stock" class="form-control" placeholder="stock" required="true">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Precio:</label>
                     <div class="col-sm-5">
-                        <input type="text" value='<%= precio%>' name="Precio" id="precio" class="form-control" placeholder="precio" required="true">
+                        <input type="text" value='<%= precio%>' name="precio" id="precio" class="form-control" placeholder="precio" required="true">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Unidad de media:</label>
                     <div class="col-sm-5">
-                        <input type="text" value='<%= unidadMedida%>' name="unidad" id="unidaddemedida" class="form-control" placeholder="unidad" required="true">
+                        <input type="text" value='<%= unidadMedida%>' name="unidaddemedida" id="unidaddemedida" class="form-control" placeholder="unidad" required="true">
                     </div>
                 </div>
 
                 <div class="mb-3 row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Estado:</label>
                     <div class="col-sm-5">
-                        <input type="text" value='<%= estado_p%>' name="estadopro" id="estadoproducto" class="form-control" placeholder="Estado" required="true">
+                        <input type="text" value='<%= estado_p%>' name="estadoproducto" id="estadoproducto" class="form-control" placeholder="Estado" required="true">
                     </div>
                 </div>
 
-                <div class="mb-3 row"
-                     <label for="inputPassword" class="col-sm-2 col-form-label">Estado Categoria:</label>
-                    <div class="col-sm-5">
-                        <input type="text" value='<%= categoria%>' name="Categoria" id="categoria" class="form-control" placeholder="Categoria" required="true">
-                    </div>
-                </div>
+                <%-- <div class="mb-3 row"
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Estado Categoria:</label>
+                     <div class="col-sm-5">
+                         <input type="text" value='<%= categoria%>' name="Categoria" id="categoria" class="form-control" placeholder="Categoria" required="true">
+                     </div>
+                 </div>--%>
 
                 <div class="mb-3 row">
                     <button type="submit" name="send" class="btn btn-success">Actualizar Producto</button>
@@ -91,9 +96,9 @@
             <%
                 }
             %>
+          
 
         </div>
         <%@include file = "../WEB-INF/Vistas-Parciales/pie.jspf" %>
     </body>
 </html>
-
