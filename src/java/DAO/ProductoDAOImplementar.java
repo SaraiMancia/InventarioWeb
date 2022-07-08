@@ -90,7 +90,7 @@ public class ProductoDAOImplementar implements ProductoDAO{
 
                 StringBuilder miSQL = new StringBuilder();
                 miSQL.append("INSERT INTO tb_producto(nom_producto, stock, precio, unidad_de_medida, estado_producto) VALUES('");
-                miSQL.append(producto.getNom_producto() + "', '").append(producto.getStock() + "', '").append(producto.getPrecio() + "', '").append(producto.getUnidad_de_medida() + "', '").append(producto.getEstado_producto()).append("\'");
+                miSQL.append(producto.getNom_producto() + "', ").append(producto.getStock() + ", ").append(producto.getPrecio() + ", '").append(producto.getUnidad_de_medida() + "', '").append(producto.getEstado_producto()).append("\'");
                 miSQL.append(");");
                 this.conn.ejecutarSQL(miSQL.toString());
             } else if (producto.getId_producto() > 0) {
