@@ -1,6 +1,7 @@
 
 package Controller;
 
+import Controller.ProductosS;
 import DAO.ProductoDAO;
 import DAO.ProductoDAOImplementar;
 import Model.Producto;
@@ -39,6 +40,7 @@ public class modificarProducto extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         //String estado = request.getParameter("opcion");
+        ProductosS p = new ProductosS();
          String id_producto = request.getParameter("id");
          String nom_producto = request.getParameter("nombre");
          String stock = request.getParameter("stock");
@@ -57,10 +59,12 @@ public class modificarProducto extends HttpServlet {
          prod.setEstado_producto(Integer.parseInt(estado_p));
          prod.setCategoria(Integer.parseInt(cat));
          
-         if(producto.guardarProd(prod)){
-             //System.out.println("Registro Actualizado.");
-              RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Producto/editarProductos.jsp?aviso=ok");
-              dispatcher.forward(request, response);
+         if(producto.guardarProd(prod)==true){
+         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/Vistas-Productos/editarProducto.jsp?aviso=Ok");
+         dispatcher.forward(request,response);
+              
+              p.listaProducto(request, response);
+              
          }else{
              System.out.println("Error. El registro no se pudo actualizar.");
          }

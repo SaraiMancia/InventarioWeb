@@ -27,7 +27,7 @@
         <%@include file = "../WEB-INF/Vistas-Parciales/encabezado.jspf" %>
         <div class="col-auto bg-gray p-5 text-center">
             <h1 class='text-center'>Información de Categoria</h1>
-            <form action="modificarProductos.do" method="post">
+            <form action="modificarProducto.do" method="post">
                 <div class="mb-3 row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">ID Categoria:</label>
                     <div class="col-sm-3">

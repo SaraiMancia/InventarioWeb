@@ -96,13 +96,13 @@ public class ProductoDAOImplementar implements ProductoDAO{
             } else if (producto.getId_producto() > 0) {
                 StringBuilder miSQL = new StringBuilder();
                 miSQL.append("UPDATE tb_producto SET id_producto = ").append(producto.getId_producto());
-                miSQL.append(",nom_producto = '").append(producto.getNom_producto());
-                miSQL.append("',stock = '").append(producto.getStock());
-                miSQL.append("',precio = '").append(producto.getPrecio());
-                miSQL.append("',unidad_de_medida = '").append(producto.getUnidad_de_medida());
-                miSQL.append("',estado_producto = '").append(producto.getEstado_producto());
+                miSQL.append(", nom_producto = '").append(producto.getNom_producto());
+                miSQL.append("', stock = ").append(producto.getStock());
+                miSQL.append(", precio = ").append(producto.getPrecio());
+                miSQL.append(", unidad_de_medida = '").append(producto.getUnidad_de_medida());
+                miSQL.append("', estado_producto = ").append(producto.getEstado_producto());
 
-                miSQL.append("WHERE id = ").append(producto.getId_producto()).append(";");
+                miSQL.append(" WHERE id_producto = ").append(producto.getId_producto()).append(";");
                 this.conn.ejecutarSQL(miSQL.toString());
             }
             guarda = true;

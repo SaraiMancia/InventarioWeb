@@ -3,19 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/Vistas-Sesecion/reportescp.jsp</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/src/java/Controller/modificarCategoria.java</file>
+            <file>file:/C:/Users/sampc/Downloads/InventarioWeb/src/java/BD/Conexion.java</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/WEB-INF/Vistas-Parciales/css-js.jspf</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/Vistas-Producto/eliminarProductos.jsp</file>
-            <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/RegistrarUsuario.jsp</file>
+            <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/principa.jsp</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/Vistas-Categorias/eliminarCategoria.jsp</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/WEB-INF/Vistas-Parciales/pie.jspf</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/src/java/Controller/Salir.java</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/WEB-INF/Vistas-Parciales/encabezado.jspf</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/Vistas-Producto/crearProductos.jsp</file>
-            <file>file:/C:/Users/sampc/Downloads/InventarioWeb/nbproject/build-impl.xml</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/src/java/Controller/categoriasS.java</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/bootstrap-3.3.7-dist/css/estilo-base.css</file>
+            <file>file:/C:/Users/sampc/Downloads/InventarioWeb/src/java/DAO/LoginDAO.java</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/Vistas-Producto/editarProductos.jsp</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/Vistas-Categorias/crearCategoria.jsp</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/src/java/DAO/registroDAOImplementar.java</file>
@@ -23,6 +25,7 @@
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/src/java/DAO/registroDAO.java</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/src/java/Model/UsuarioM.java</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/index.jsp</file>
+            <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/inicio.jsp</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/Vistas-s-r/reportecategoria.jsp</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/Vistas-Categorias/editarCategoria.jsp</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/index.html</file>
@@ -34,6 +37,8 @@
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/bootstrap-3.3.7-dist/js/newjavascript.js</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/Vistas-Categorias/listarCategorias.jsp</file>
             <file>file:/C:/Users/sampc/Downloads/InventarioWeb/src/java/Controller/ProductosS.java</file>
+            <file>file:/C:/Users/sampc/Downloads/InventarioWeb/web/Vistas-s-r/reporteproducto.jsp</file>
+            <file>file:/C:/Users/sampc/Downloads/InventarioWeb/src/java/Controller/eliminarProducto.java</file>
         </group>
     </open-files>
 </project-private>
